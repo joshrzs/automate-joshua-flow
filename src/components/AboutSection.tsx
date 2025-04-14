@@ -17,30 +17,6 @@ const AboutSection = () => {
     <section id="about" className="relative">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div className="lg:w-2/5">
-            <div className="relative">
-              <div className="w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-tr from-jgreen/20 to-jorange/20 rounded-2xl"></div>
-                <img 
-                  src="/lovable-uploads/32373d5d-df60-4058-befb-1db1e7b0a1c6.png" 
-                  alt="Joshua Balando" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-background shadow-lg rounded-xl p-4 md:p-6">
-                <div className="flex items-center gap-4">
-                  <div className="bg-jgreen/10 text-jgreen p-3 md:p-4 rounded-full">
-                    <CheckCircle className="w-6 h-6 md:w-8 md:h-8" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Experience</p>
-                    <p className="text-xl md:text-2xl font-bold">4+ Years</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div className="lg:w-3/5">
             <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4">
               About Me

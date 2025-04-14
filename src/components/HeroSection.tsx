@@ -8,17 +8,17 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center pt-20 pb-10 bg-gradient-to-br from-background to-muted/30">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
-          <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
+          <div className="lg:w-2/3 space-y-6 text-left"> {/* Changed from text-center to text-left */}
             <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               AI Automation Specialist & VA
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
               I'm <span className="text-jgreen">Joshua</span> <span className="text-jorange">Balando</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               I help businesses save time and scale faster through smart, automated systems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Button asChild size="lg" className="bg-jgreen hover:bg-jgreen-dark">
                 <a href="#contact">Let's Automate</a>
               </Button>
@@ -28,7 +28,7 @@ const HeroSection = () => {
                 </a>
               </Button>
             </div>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-6 animate-fade-in" style={{ animationDelay: '1s' }}>
+            <div className="flex flex-wrap gap-4 justify-start pt-6 animate-fade-in" style={{ animationDelay: '1s' }}>
               <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">Zapier</div>
               <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">Make</div>
               <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">GHL</div>
@@ -36,8 +36,8 @@ const HeroSection = () => {
               <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">Shopify</div>
             </div>
           </div>
-          <div className="lg:w-1/2 relative">
-            <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="lg:w-1/3 relative"> {/* Reduced width from 1/2 to 1/3 */}
+            <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <img 
                 src="/lovable-uploads/32373d5d-df60-4058-befb-1db1e7b0a1c6.png" 
                 alt="Joshua Balando - AI Automation Specialist" 
