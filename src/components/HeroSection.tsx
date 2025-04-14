@@ -1,0 +1,62 @@
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+
+const HeroSection = () => {
+  return (
+    <section id="home" className="min-h-screen flex items-center pt-20 pb-10 bg-gradient-to-br from-background to-muted/30">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
+          <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
+            <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              AI Automation Specialist & VA
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              I'm <span className="text-jgreen">Joshua</span> <span className="text-jorange">Balando</span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              I help businesses save time and scale faster through smart, automated systems.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              <Button asChild size="lg" className="bg-jgreen hover:bg-jgreen-dark">
+                <a href="#contact">Let's Automate</a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-jgreen text-jgreen hover:bg-jgreen/10">
+                <a href="#projects" className="flex items-center gap-2">
+                  View My Work <ArrowRight size={16} />
+                </a>
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-6 animate-fade-in" style={{ animationDelay: '1s' }}>
+              <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">Zapier</div>
+              <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">Make</div>
+              <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">GHL</div>
+              <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">ChatGPT</div>
+              <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">Shopify</div>
+            </div>
+          </div>
+          <div className="lg:w-1/2 relative">
+            <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <img 
+                src="/lovable-uploads/32373d5d-df60-4058-befb-1db1e7b0a1c6.png" 
+                alt="Joshua Balando - AI Automation Specialist" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-jorange text-white p-4 rounded-xl animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="text-sm font-medium">4+ Years</div>
+              <div className="text-xs">Experience</div>
+            </div>
+            <div className="hidden md:block absolute bottom-0 left-0 transform -translate-x-1/4 translate-y-1/4 bg-jgreen text-white p-4 rounded-xl animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              <div className="text-sm font-medium">AI Expert</div>
+              <div className="text-xs">Automations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
