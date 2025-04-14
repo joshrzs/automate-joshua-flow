@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const AboutSection = () => {
@@ -13,8 +13,21 @@ const AboutSection = () => {
     "No-Code/Low-Code Solutions"
   ];
 
+  const education = [
+    {
+      degree: "Bachelor of Science in Information Technology",
+      institution: "Cavite State University",
+      period: "2016-2021"
+    },
+    {
+      degree: "Professional Diploma of Virtual Executive Assistant",
+      institution: "MTF Institute | Udemy",
+      period: "2024"
+    }
+  ];
+
   return (
-    <section id="about" className="relative">
+    <section id="about" className="relative border-t border-border">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-3/5">
@@ -44,6 +57,21 @@ const AboutSection = () => {
                   <span>{skill}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-4">
+                <GraduationCap className="text-jgreen h-5 w-5" />
+                <h3 className="text-lg font-medium">Education & Certification</h3>
+              </div>
+              <div className="space-y-4 pl-7">
+                {education.map((item, index) => (
+                  <div key={index} className="border-l-2 border-jgreen pl-4 py-1">
+                    <p className="font-medium">{item.degree}</p>
+                    <p className="text-sm text-muted-foreground">{item.institution} | {item.period}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <Button asChild className="bg-jgreen hover:bg-jgreen-dark">

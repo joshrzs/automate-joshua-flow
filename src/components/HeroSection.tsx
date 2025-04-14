@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -9,7 +10,7 @@ const HeroSection = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
           <div className="lg:w-2/3 space-y-6 text-left">
             <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              AI Automation Specialist & VA
+              AI Workflow & Automation Specialist
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
               I'm <span className="text-jgreen">Joshua</span> <span className="text-jorange">Balando</span>
@@ -36,19 +37,19 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="lg:w-1/3 relative">
-            <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full overflow-hidden mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <img 
-                src="/lovable-uploads/24758f8a-d11b-489f-8c48-1e6691bf158f.png" 
+                src="/lovable-uploads/32373d5d-df60-4058-befb-1db1e7b0a1c6.png" 
                 alt="Joshua Balando - AI Automation Specialist" 
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-jorange text-white p-4 rounded-xl animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <div className="text-sm font-medium">4+ Years</div>
-              <div className="text-xs">Experience</div>
+              <div className="text-sm font-medium">WorkFlow</div>
+              <div className="text-xs">Builder</div>
             </div>
             <div className="hidden md:block absolute bottom-0 left-0 transform -translate-x-1/4 translate-y-1/4 bg-jgreen text-white p-4 rounded-xl animate-fade-in" style={{ animationDelay: '0.8s' }}>
-              <div className="text-sm font-medium">AI Expert</div>
+              <div className="text-sm font-medium">AI Powered</div>
               <div className="text-xs">Automations</div>
             </div>
           </div>
