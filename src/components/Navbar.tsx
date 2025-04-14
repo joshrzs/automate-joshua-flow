@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
@@ -33,10 +32,8 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-3' : 'py-5 bg-transparent'}`}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold flex items-center">
-            <span className="text-jgreen">Port</span>
-            <span className="text-jorange">folio</span>
-          </a>
+          {/* Removed Portfolio logo */}
+          <div className="w-10"></div> {/* Empty div for spacing */}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -53,9 +50,7 @@ const Navbar = () => {
               ))}
             </ul>
             <ThemeToggle />
-            <Button asChild className="bg-jgreen hover:bg-jgreen-dark">
-              <a href="#contact">Let's Connect</a>
-            </Button>
+            {/* Removed Let's Connect button */}
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -88,11 +83,7 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <li>
-                <Button asChild className="w-full bg-jgreen hover:bg-jgreen-dark">
-                  <a href="#contact" onClick={() => setIsOpen(false)}>Let's Connect</a>
-                </Button>
-              </li>
+              {/* Removed Let's Connect button */}
             </ul>
           </div>
         </div>

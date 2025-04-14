@@ -39,17 +39,17 @@ const HeroSection = () => {
           <div className="lg:w-1/3 relative">
             <div className="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full overflow-hidden mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <img 
-                src="/lovable-uploads/32373d5d-df60-4058-befb-1db1e7b0a1c6.png" 
+                src="/lovable-uploads/b5a600a2-8bc4-47d0-98e3-e35daf57a0bb.png" 
                 alt="Joshua Balando - AI Automation Specialist" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-jorange text-white p-4 rounded-xl animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <div className="text-sm font-medium">WorkFlow</div>
+            <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-jorange text-white p-2 rounded-xl animate-fade-in text-xs" style={{ animationDelay: '0.6s' }}>
+              <div className="font-medium">WorkFlow</div>
               <div className="text-xs">Builder</div>
             </div>
-            <div className="hidden md:block absolute bottom-0 left-0 transform -translate-x-1/4 translate-y-1/4 bg-jgreen text-white p-4 rounded-xl animate-fade-in" style={{ animationDelay: '0.8s' }}>
-              <div className="text-sm font-medium">AI Powered</div>
+            <div className="hidden md:block absolute bottom-0 left-0 transform -translate-x-1/4 translate-y-1/4 bg-jgreen text-white p-2 rounded-xl animate-fade-in text-xs" style={{ animationDelay: '0.8s' }}>
+              <div className="font-medium">AI Powered</div>
               <div className="text-xs">Automations</div>
             </div>
           </div>
