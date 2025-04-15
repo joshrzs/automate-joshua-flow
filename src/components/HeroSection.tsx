@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 const HeroSection = () => {
   return (
@@ -12,14 +13,15 @@ const HeroSection = () => {
           <div className="lg:w-2/3 space-y-6 text-left">
             <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                Hi, I'm <span className="text-jgreen">Josh</span>
+                Hi, I'm <span className="text-jgreen">Josh</span>,<br />
+                a Filipino AI Automation & Workflow Specialist
               </h1>
               <Badge variant="secondary" className="text-lg bg-background/50 backdrop-blur-sm">
                 Your AI-Powered Partner
               </Badge>
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              I help you streamline your workflow through smart, automated systems.
+              Automating the boring stuff so you don't have to.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Button asChild size="lg" className="bg-jgreen hover:bg-jgreen-dark">
@@ -32,37 +34,71 @@ const HeroSection = () => {
               </Button>
             </div>
             <div className="flex flex-wrap gap-4 justify-start pt-6 animate-fade-in" style={{ animationDelay: '1s' }}>
-              <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">Zapier</div>
-              <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">Make</div>
-              <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">GHL</div>
-              <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">ChatGPT</div>
-              <div className="bg-background shadow-sm rounded-full px-4 py-2 text-sm font-medium">Shopify</div>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
+                    Zapier
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  Automation made simple
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
+                    Make
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  Advanced workflow automation
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
+                    GHL
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  High-level marketing automation
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
+                    ChatGPT
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  AI-powered solutions
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
+                    Shopify
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  E-commerce automation
+                </TooltipContent>
+              </Tooltip>
             </div>
           </div>
           <div className="lg:w-1/3 relative">
             <div 
-              className="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full overflow-hidden mx-auto animate-fade-in animate-bounce-slow" 
+              className="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full overflow-hidden mx-auto animate-fade-in relative" 
               style={{ 
                 animationDelay: '0.2s',
                 animation: 'floating 3s ease-in-out infinite'
               }}
             >
-              <style>
-                {`
-                  @keyframes floating {
-                    0% { transform: translateY(0px); }
-                    50% { transform: translateY(-10px); }
-                    100% { transform: translateY(0px); }
-                  }
-                  .animate-bounce-slow {
-                    animation: floating 3s ease-in-out infinite;
-                  }
-                `}
-              </style>
+              <div className="absolute inset-0 rounded-full bg-jgreen/20 filter blur-xl animate-pulse"></div>
               <img 
                 src="/lovable-uploads/b5a600a2-8bc4-47d0-98e3-e35daf57a0bb.png" 
                 alt="Joshua Balando - AI Automation Specialist" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover relative z-10"
               />
             </div>
           </div>
