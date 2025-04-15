@@ -9,14 +9,11 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
           <div className="lg:w-2/3 space-y-6 text-left">
-            <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              AI Workflow & Automation Specialist
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              I'm <span className="text-jgreen">Joshua</span> <span className="text-jorange">Balando</span>
+              Hi, I'm Josh. | Your AI-Powered Partner
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              I help businesses save time and scale faster through smart, automated systems.
+              I help you streamline your workflow through smart, automated systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Button asChild size="lg" className="bg-jgreen hover:bg-jgreen-dark">
@@ -43,14 +40,6 @@ const HeroSection = () => {
                 alt="Joshua Balando - AI Automation Specialist" 
                 className="w-full h-full object-cover"
               />
-            </div>
-            <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-jorange text-white p-2 rounded-xl animate-fade-in text-xs" style={{ animationDelay: '0.6s' }}>
-              <div className="font-medium">WorkFlow</div>
-              <div className="text-xs">Builder</div>
-            </div>
-            <div className="hidden md:block absolute bottom-0 left-0 transform -translate-x-1/4 translate-y-1/4 bg-jgreen text-white p-2 rounded-xl animate-fade-in text-xs" style={{ animationDelay: '0.8s' }}>
-              <div className="font-medium">AI Powered</div>
-              <div className="text-xs">Automations</div>
             </div>
           </div>
         </div>
