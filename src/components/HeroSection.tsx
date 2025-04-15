@@ -10,7 +10,8 @@ const HeroSection = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
           <div className="lg:w-2/3 space-y-6 text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              Hi, I'm Josh. | Your AI-Powered Partner
+              Hi, I'm <span className="text-jgreen">Josh</span>. | 
+              <span className="text-jgreen"> AI-Powered</span> Partner
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               I help you streamline your workflow through smart, automated systems.
