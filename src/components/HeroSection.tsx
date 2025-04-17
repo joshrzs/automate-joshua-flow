@@ -13,13 +13,9 @@ const HeroSection = () => {
           <div className="lg:w-2/3 space-y-6 text-left">
             <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              Automating the boring stuff<span className="text-jgreen">so you don't have to</span>,<br />
-              Hi, I’m Josh 👋  
-              Your Filipino GHL Automation & Workflow Specialist  
-              </h1>
-              <Badge variant="secondary" className="text-lg bg-background/50 backdrop-blur-sm">
-                Your AI-Powered Partner
-              </Badge>
+              Hi, I’m Josh 👋<span className="text-jyellow">GHL</span>,<br />
+              Workflow & Automation Specialist   
+              </h1>              
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               Automating the boring stuff so you don't have to.
