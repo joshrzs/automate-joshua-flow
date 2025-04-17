@@ -15,7 +15,8 @@ const HeroSection = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
               Hi, I’m Josh👋<span className="text-jgreen">GHL</span>,<br />
               Workflow & Automation Specialist   
-              </h1>              
+              </h1>    
+              <br></br>          
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               Automating the boring stuff so you don't have to.
