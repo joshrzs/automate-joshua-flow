@@ -14,7 +14,7 @@ const HeroSection = () => {
             <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 Hi, I'm <span className="text-jgreen">Josh</span>,<br />
-                a Filipino AI Automation & Workflow Specialist
+                a Filipino GHL Automation & Workflow Specialist
               </h1>
               <Badge variant="secondary" className="text-lg bg-background/50 backdrop-blur-sm">
                 Your AI-Powered Partner
