@@ -10,7 +10,7 @@
   height: 4px;
   width: 100%;
   display: block; /* Ensure it's visible */
-  background: linear-gradient(90deg, #0ff, #00f, #0ff);
+  background: linear-gradient(90deg, #0ff, #00f, rgb(255, 136, 0));
   background-size: 200% 100%; /* Ensure the gradient is large enough */
   animation: glowBorder 3s linear infinite;
   box-shadow: 0 0 10px #0ff;
