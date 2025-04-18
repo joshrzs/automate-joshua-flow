@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
-import '../styles/glow.css';
+import "../styles/glow.css";
+
 
 
 const Navbar = () => {
