@@ -1,23 +1,25 @@
-.Navbar-glow::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4px;
-    width: 100%;
-    background: linear-gradient(90deg, #0ff, #00f, #0ff);
-    background-size: 200% 100%;
-    animation: glowBorder 3s linear infinite;
-    box-shadow: 0 0 10px #0ff;
+.navbar-glow::after {
+  content: "";
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #0ff, #00f, #0ff);
+  background-size: 200% 100%;
+  animation: glowBorder 3s linear infinite;
+  box-shadow: 0 0 10px #0ff;
+  z-index: 10;
+}
+
+@keyframes glowBorder {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes glowBorder {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 200% 50%;
-    }
+  100% {
+    background-position: 100% 50%;
   }
+}
+
 
   
