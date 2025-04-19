@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import "../styles/glow.css";
-import "../styles/navbar.css";
+
 
 
 const Navbar = () => {
@@ -32,7 +32,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 relative navbar-glow transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-3' : 'py-5 bg-transparent'}`}>
+    <nav className={`sticky top-0 md:fixed md:top-0 md:left-0 w-full z-50 navbar-glow transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-3' : 'py-5 bg-transparent'}`}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
           {/* Removed Portfolio logo */}
