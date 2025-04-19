@@ -85,9 +85,9 @@ const HeroSection = () => {
             </div>
           </div>
          
-          <div className="lg:w-1/3 relative">
-          <div 
-               className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden animate-fade-in relative -left-6 -top-4" 
+          <div className="lg:w-1/3 flex justify-center relative">
+  <div 
+    className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden animate-fade-in relative -left-6 -top-4" 
               style={{ 
                 animationDelay: '0.3s',
                 animation: 'floating 3s ease-in-out infinite'
