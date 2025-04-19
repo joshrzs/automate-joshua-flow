@@ -16,13 +16,13 @@ const ServicesSection = () => {
       icon: <Database className="text-jorange h-10 w-10" />,
     },
     {
-      title: "AI-Powered SOP & Task Automation",
-      description: "Create efficient standard operating procedures and automate tasks using AI technologies like ChatGPT.",
+      title: "Funnel Design & Website Creation",
+      description: "Design visually appealing and conversion-focused funnels and websites using GoHighLevel’s builder—complete with forms, calendars, and automation integrations.",
       icon: <Bot className="text-jorange h-10 w-10" />,
     },
     {
-      title: "Data Entry & Management",
-      description: "Reliable data entry and management services to keep your information organized and accessible.",
+      title: "Email & SMS Campaign Setup",
+      description: "Create and schedule targeted email and SMS campaigns to engage leads, follow up with clients, and boost overall communication using GHL’s built-in tools.",
       icon: <FileSpreadsheet className="text-jorange h-10 w-10" />,
     },
   ];
