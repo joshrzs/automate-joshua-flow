@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -65,7 +64,7 @@ export default {
         },
         // Custom colors for Joshua's portfolio
         jgreen: {
-          DEFAULT: '#F4E76E',
+          DEFAULT: '#0F5132',
           light: '#1A7F4E',
           dark: '#093D25',
         },
@@ -97,23 +96,20 @@ export default {
           '0%': { opacity: '1', transform: 'translateY(0)' },
           '100%': { opacity: '0', transform: 'translateY(10px)' },
         },
-        neonGlow: {
-          '0%': {
-            textShadow: '0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99',
-          },
-          '50%': {
-            textShadow: '0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff',
-          },
-          '100%': {
-            textShadow: '0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99',
-          },
+        glitch: {
+          '0%': { transform: 'translate(2px, -2px) skew(-0.7deg)', opacity: '1' },
+          '20%': { transform: 'translate(-2px, 2px) skew(0.7deg)', opacity: '1' },
+          '40%': { transform: 'translate(2px, -2px) skew(-0.7deg)', opacity: '1' },
+          '60%': { transform: 'translate(-2px, 2px) skew(0.7deg)', opacity: '1' },
+          '80%': { transform: 'translate(2px, -2px) skew(-0.7deg)', opacity: '1' },
+          '100%': { transform: 'translate(0, 0) skew(0)', opacity: '1' },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in': 'fade-in 0.5s ease-out forwards',
-        neonGlow: 'neonGlow 1.5s ease-in-out infinite',
+        glitch: 'glitch 1s infinite',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
