@@ -7,7 +7,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 pb-10 bg-gradient-to-br from-background to-muted/30">
+    <section id="home" className="min-h-screen flex items-center pt-60 pb-10 bg-gradient-to-br from-background to-muted/30">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
           <div className="lg:w-2/3 space-y-6 text-left">
@@ -94,7 +94,7 @@ const HeroSection = () => {
             >
               <div className="absolute inset-0 rounded-full bg-jgreen/20 filter blur-xl animate-pulse"></div>
               <img 
-                src="/lovable-uploads/b5a600a2-8bc4-47d0-98e3-e35daf57a0bb.png" 
+                src="/lovable-uploads/Pfp.png" 
                 alt="Joshua Balando - AI Automation Specialist" 
                 className="w-full h-full object-cover relative z-10"
               />
