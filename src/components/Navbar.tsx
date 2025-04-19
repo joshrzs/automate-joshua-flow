@@ -32,7 +32,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`sticky top-0 md:fixed md:top-0 md:left-0 w-full z-50 navbar-glow transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-3' : 'py-5 bg-transparent'}`}>
+    <nav className={`sticky top-0 md:fixed md:top-0 md:left-0 w-full z-50 navbar-glow transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-4' : 'py-5 bg-transparent'}`}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
           {/* Removed Portfolio logo */}
