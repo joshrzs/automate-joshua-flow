@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Zap, Database, Bot, FileSpreadsheet } from 'lucide-react';
+import { Zap, Database, FileSpreadsheet, Layers3Icon, MailCheck } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const ServicesSection = () => {
@@ -18,12 +18,12 @@ const ServicesSection = () => {
     {
       title: "Funnel Design & Website Creation",
       description: "Design visually appealing and conversion-focused funnels and websites using GoHighLevel’s builder—complete with forms, calendars, and automation integrations.",
-      icon: <Bot className="text-jorange h-10 w-10" />,
+      icon: <Layers3Icon className="text-jorange h-10 w-10" />,
     },
     {
       title: "Email & SMS Campaign Setup",
       description: "Create and schedule targeted email and SMS campaigns to engage leads, follow up with clients, and boost overall communication using GHL’s built-in tools.",
-      icon: <FileSpreadsheet className="text-jorange h-10 w-10" />,
+      icon: <MailCheck className="text-jorange h-10 w-10" />,
     },
   ];
 
