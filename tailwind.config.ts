@@ -65,7 +65,7 @@ export default {
         },
         // Custom colors for Joshua's portfolio
         jgreen: {
-          DEFAULT: '#0F5132',
+          DEFAULT: '#F4E76E',
           light: '#1A7F4E',
           dark: '#093D25',
         },
