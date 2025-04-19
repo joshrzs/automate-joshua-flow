@@ -7,7 +7,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-60 pb-10 bg-gradient-to-br from-background to-muted/30">
+    <section id="home" className="min-h-screen flex items-center pt-30 pb-10 bg-gradient-to-br from-background to-muted/30">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
           <div className="lg:w-2/3 space-y-6 text-left">
