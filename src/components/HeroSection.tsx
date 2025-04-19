@@ -84,9 +84,10 @@ const HeroSection = () => {
               </Tooltip>
             </div>
           </div>
+         
           <div className="lg:w-1/3 relative">
-            <div 
-              className="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full overflow-hidden mx-auto animate-fade-in relative" 
+          <div 
+               className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden animate-fade-in relative" 
               style={{ 
                 animationDelay: '0.2s',
                 animation: 'floating 3s ease-in-out infinite'
