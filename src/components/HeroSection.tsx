@@ -85,23 +85,22 @@ const HeroSection = () => {
             </div>
           </div>
          
-          <div className="lg:w-1/3 flex justify-center relative">
+         <div className="lg:w-1/3 flex justify-center relative">
   <div 
-    className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden animate-fade-in relative -left-6 -top-4" 
-    style={{ 
-      animation: 'floating 3s ease-in-out infinite', 
-      animationDelay: '0.3s' 
-    }}
-  >
-    <div className="absolute inset-0 rounded-full bg-jgreen/20 filter blur-xl animate-pulse"></div>
-    <img 
-      src="/lovable-uploads/Pfp.png" 
-      alt="Joshua Balando - AI Automation Specialist" 
-      className="w-full h-full object-cover relative z-10"
-    />
-  </div>
-</div>
-
+    className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden animate-fade-in relative" 
+              style={{ 
+                animationDelay: '0.3s',
+                animation: 'floating 3s ease-in-out infinite'
+              }}
+            >
+              <div className="absolute inset-0 rounded-full bg-jgreen/20 filter blur-xl animate-pulse"></div>
+              <img 
+                src="/lovable-uploads/Pfp.png" 
+                alt="Joshua Balando - AI Automation Specialist" 
+                className="w-full h-full object-cover relative z-10"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
