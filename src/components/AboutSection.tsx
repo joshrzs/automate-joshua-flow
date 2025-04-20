@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 
 const AboutSection = () => {
   const skills = [
-    "Zapier & Make Expert",
-    "GoHighLevel CRM Specialist",
+    "Zapier & Make Automation",
+    "GoHighLevel CRM Workflows",
     "ChatGPT & AI Integration",
     "Shopify Integration",
     "Process Optimization",
@@ -39,16 +39,22 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-muted-foreground mb-6">
-              I'm Joshua Balando, an AI Automation Specialist who transitioned from a data entry role to become
-              an expert in business automation. With over 4 years of experience, I've dedicated my career to helping businesses
-              eliminate repetitive tasks and create streamlined processes.
+              Hi, I’m Joshua Balando - Filipino  AI Automation Specialist with a degree in IT
+              and years of experience data entry and administrative support. I started my journey 
+              handling repetitive, time-consuming tasks - and that’s exactly what sparked my passion
+              for automation.
             </p>
             
             <p className="text-muted-foreground mb-8">
-              My focus is efficiency through no-code/low-code tools like Zapier, Make, and GoHighLevel, combined with
-              the power of AI. I believe that well-designed automated systems are the key to scaling businesses
-              without proportionally increasing workload.
+            After seeing firsthand how much time and energy gets wasted on manual work, I made it my mission to help
+            businesses streamline their operations through smart, automated systems. I’ve since transitioned into the AI
+            automation space, where I now specialize in building efficient workflows using tools like Zapier, Make, and
+            GoHighLevel — all without the need for complex coding.
             </p>
+
+            <div className="h-4" /> {/* This adds vertical space (1rem = 16px) */}
+
+<p className="text-muted-foreground mb-4 font-semibold">What I Bring to the Table:</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {skills.map((skill, index) => (
