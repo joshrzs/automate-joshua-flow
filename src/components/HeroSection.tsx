@@ -85,26 +85,18 @@ const HeroSection = () => {
             </div>
           </div>
          
-          <div className="lg:w-1/3 flex justify-center lg:justify-start relative">
+          <div className="flex justify-center lg:justify-start relative">
   <div 
-    className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden animate-fade-in relative mx-auto lg:mx-0"
-    style={{ animationDelay: '0.3s' }}
+    className="w-[28rem] sm:w-[36rem] md:w-[46rem] lg:w-[52rem] h-auto overflow-hidden relative mx-auto"
   >
-    {/* Glowing Background */}
-    <div className="absolute inset-0 rounded-full bg-jgreen/30 blur-xl animate-neon-pulse z-0" />
-
-    {/* Profile Video */}
-    <video 
-      src="/lovable-uploads/prfvid.mp4" 
-      autoPlay 
-      loop 
-      muted 
-      playsInline 
-      className="w-full h-full object-cover rounded-full relative z-10"
+    {/* Profile Image */}
+    <img 
+      src="/lovable-uploads/herosec.png" 
+      alt="Joshua Balando - AI Automation Specialist" 
+      className="w-full h-full object-cover"
     />
   </div>
 </div>
-
 
         </div>
       </div>
