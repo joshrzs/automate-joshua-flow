@@ -93,10 +93,13 @@ const HeroSection = () => {
     {/* Glowing Background */}
     <div className="absolute inset-0 rounded-full bg-jgreen/30 blur-xl animate-neon-pulse z-0" />
 
-    {/* Profile Image */}
-    <img 
-      src="/lovable-uploads/Pfp.png" 
-      alt="Joshua Balando - AI Automation Specialist" 
+    {/* Profile Video */}
+    <video 
+      src="/lovable-uploads/prfvid.mp4" 
+      autoPlay 
+      loop 
+      muted 
+      playsInline 
       className="w-full h-full object-cover rounded-full relative z-10"
     />
   </div>
