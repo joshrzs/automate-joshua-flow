@@ -31,16 +31,16 @@ const LogoSlider = () => {
     <div className="w-full py-8">
       <Swiper
         modules={[Autoplay]}
-        slidesPerView={2} // Default for mobile view
-        spaceBetween={20}
+        slidesPerView={2} // Default to 2 on mobile
+        spaceBetween={10} // Space between logos
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop={true}
         breakpoints={{
-          320: { slidesPerView: 2 }, // Mobile view
-          480: { slidesPerView: 3 }, // Mobile view
-          640: { slidesPerView: 4 },
-          768: { slidesPerView: 5 },
-          1024: { slidesPerView: 6 },
+          320: { slidesPerView: 2, spaceBetween: 10 }, // For very small screens
+          480: { slidesPerView: 3, spaceBetween: 15 }, // For slightly larger mobile screens
+          640: { slidesPerView: 4, spaceBetween: 20 }, // Tablets and small laptops
+          768: { slidesPerView: 5, spaceBetween: 25 }, // Medium screens
+          1024: { slidesPerView: 6, spaceBetween: 30 }, // Larger screens
         }}
       >
         {logos.map((logo, index) => (
@@ -58,3 +58,4 @@ const LogoSlider = () => {
 };
 
 export default LogoSlider;
+

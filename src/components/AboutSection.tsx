@@ -42,7 +42,7 @@ const AboutSection = () => {
 
         <div className="flex flex-col-reverse lg:flex-row items-start gap-12">
           {/* Text Content Section */}
-          <div className="lg:w-3/5">
+          <div className="w-full lg:w-3/5">
             <p className="text-muted-foreground mb-6">
               Hi, I’m Joshua Balando - Filipino AI Automation Specialist with a degree in IT
               and years of experience in data entry and administrative support. I started my journey 
@@ -62,7 +62,8 @@ const AboutSection = () => {
             <br />
 
             <div className="mb-8">
-  <p className="text-3xl md:text-4xl font-bold mb-6">Tools I Work With:</p>
+  <p className="text-3xl md:text-4xl font-bold mb-6">Tools I <span className="text-jorange">Work With</span>
+  </p>
   <LogoSlider />
 </div>
 
@@ -74,7 +75,8 @@ const AboutSection = () => {
           {/* Right Column: Image + Education */}
           <div className="lg:w-2/5 w-full flex flex-col items-center lg:items-start mb-8 lg:mb-0">
             {/* Image Section */}
-            <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-full mb-6">
+            <div className="w-full max-w-[340px] mb-6">
+
               <img
                 src="/lovable-uploads/aboutsec.png"
                 alt="Joshua Balando - AI Automation Specialist"
