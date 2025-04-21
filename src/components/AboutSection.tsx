@@ -1,6 +1,8 @@
 import React from 'react';
 import { CheckCircle, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import LogoSlider from '@/components/ui/LogoSlider';
+
 
 const AboutSection = () => {
   const skills = [
@@ -55,16 +57,14 @@ const AboutSection = () => {
               GoHighLevel — all without the need for complex coding.
             </p>
 
-            <p className="text-muted-foreground mb-4 font-semibold">What I Bring to the Table:</p>
+            <br />
+            <br />
+            <br />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              {skills.map((skill, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="text-jgreen h-5 w-5" />
-                  <span>{skill}</span>
-                </div>
-              ))}
-            </div>
+            <div className="mb-8">
+  <p className="text-3xl md:text-4xl font-bold mb-6">Tools I Work With:</p>
+  <LogoSlider />
+</div>
 
             <Button asChild className="bg-jgreen hover:bg-jgreen-dark">
               <a href="#contact">Get In Touch</a>
