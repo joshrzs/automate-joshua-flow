@@ -28,17 +28,19 @@ const AboutSection = () => {
   return (
     <section id="about" className="relative border-t border-border">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row items-start gap-12">
+        <div className="mb-8">
+          {/* Heading Section - Always on Top */}
+          <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4">
+            About Me
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Who's Behind All This <span className="text-jorange">Great Work?</span>
+          </h2>
+        </div>
 
+        <div className="flex flex-col-reverse lg:flex-row items-start gap-12">
           {/* Text Content Section */}
           <div className="lg:w-3/5">
-            <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4">
-              About Me
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Who's Behind All This <span className="text-jorange">Great Work?</span>
-            </h2>
-
             <p className="text-muted-foreground mb-6">
               Hi, I’m Joshua Balando - Filipino AI Automation Specialist with a degree in IT
               and years of experience in data entry and administrative support. I started my journey 
@@ -70,7 +72,7 @@ const AboutSection = () => {
           </div>
 
           {/* Right Column: Image + Education */}
-          <div className="lg:w-2/5 w-full flex flex-col items-center lg:items-start">
+          <div className="lg:w-2/5 w-full flex flex-col items-center lg:items-start mb-8 lg:mb-0">
             {/* Image Section */}
             <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-full mb-6">
               <img
@@ -96,7 +98,6 @@ const AboutSection = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
