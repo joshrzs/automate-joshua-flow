@@ -105,12 +105,12 @@ const ContactSection = () => {
               </CardContent>
             </Card>
             
-            <div className="p-6 bg-gradient-to-br from-jgreen to-jgreen-dark text-white rounded-xl">
+            <div className="p-6 bg-gradient-to-br from-jorange to-jorange-dark text-white rounded-xl">
               <h3 className="font-medium text-xl mb-3">Ready to automate your business?</h3>
               <p className="mb-4 text-white/90">
-                Get in touch today and let's discuss how automation can transform your workflow.
+              I typically respond within 24 hours. Feel free to reach out. I'm here to help make things easier for you.
               </p>
-              <Button asChild className="bg-white text-jgreen hover:bg-white/90">
+              <Button asChild className="bg-jgreen text-white hover:bg-white/90">
                 <a href="mailto:joshbalando@gmail.com" className="flex items-center gap-2">
                   Email Me <Send className="w-4 h-4" />
                 </a>
