@@ -13,7 +13,7 @@ const HeroSection = () => {
           <div className="lg:w-2/3 space-y-6 text-left">
             <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              Hi, I’m Josh👋<span className="text-jgreen">GHL</span>,<br />
+              Hi, I’m Josh👋<span className="text-jorange">GHL</span>,<br />
               Workflow & Automation Specialist   
               </h1>    
               <br></br>          
