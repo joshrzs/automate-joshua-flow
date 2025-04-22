@@ -175,7 +175,7 @@ const ContactSection = () => {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-jgreen hover:bg-jgreen-dark"
+                    className="w-full bg-jorange hover:bg-jorange-dark"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
