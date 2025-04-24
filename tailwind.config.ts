@@ -7,6 +7,7 @@ export default {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./node_modules/@shadcn/ui/**/*.{js,ts,tsx}", // Include ShadCN UI components
   ],
   prefix: "",
   theme: {
@@ -62,7 +63,6 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
-        // Custom colors for Joshua's portfolio
         jgreen: {
           DEFAULT: '#0F5132',
           light: '#1A7F4E',
@@ -72,6 +72,13 @@ export default {
           DEFAULT: '#F97316',
           light: '#FB923C',
           dark: '#EA580C',
+        },
+        chart: {
+          '1': 'hsl(var(--chart-1))',
+          '2': 'hsl(var(--chart-2))',
+          '3': 'hsl(var(--chart-3))',
+          '4': 'hsl(var(--chart-4))',
+          '5': 'hsl(var(--chart-5))',
         },
       },
       borderRadius: {
@@ -105,19 +112,17 @@ export default {
           '100%': { transform: 'translate(0, 0) skew(0)', opacity: '1' },
         },
         'neon-pulse': {
-    '0%': { boxShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00' },
-    '50%': { boxShadow: '0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00' },
-    '100%': { boxShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00' },
-  },
-
+          '0%': { boxShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00' },
+          '50%': { boxShadow: '0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00' },
+          '100%': { boxShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in': 'fade-in 0.5s ease-out forwards',
         glitch: 'glitch 1s infinite',
-        'neon-pulse': 'neon-pulse 1.5s infinite', // Add the neon-pulse animation here
-        
+        'neon-pulse': 'neon-pulse 1.5s infinite',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
@@ -125,6 +130,8 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config;
-
+  plugins: [
+    require("tailwindcss-animate"),
+    // Removed @shadcn/ui/tailwind plugin due to incorrect import
+  ],
+};

@@ -1,35 +1,57 @@
-
-import React from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowUpRight } from 'lucide-react';
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowUpRight } from "lucide-react";
+import ProjectModal from "./ProjectModal"; // Path to your modal component
 
 const ProjectsSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  // Multiple projects with different media, descriptions, and tools
   const projects = [
     {
       title: "Automated Lead Capture to CRM",
-      description: "Built a seamless lead capture system that automatically imports leads from multiple sources into GoHighLevel CRM, with follow-up sequence.",
+      description:
+        "Built a seamless lead capture system that automatically imports leads from multiple sources into GoHighLevel CRM, with follow-up sequence.",
       tools: ["Zapier", "GHL", "Make"],
-      category: "CRM Automation"
+      category: "CRM Automation",
+      media: ["/media/bolt.png"], // Add your image URLs here
     },
     {
       title: "Shopify + GoHighLevel Integration",
-      description: "Created a two-way sync between Shopify and GoHighLevel to unify customer data and automate order follow-up sequences.",
+      description:
+        "Created a two-way sync between Shopify and GoHighLevel to unify customer data and automate order follow-up sequences.",
       tools: ["Shopify", "GHL", "Zapier"],
-      category: "E-commerce Automation"
+      category: "E-commerce Automation",
+      media: ["/media/bolt.png"], // Add your image URLs here
     },
     {
       title: "Inventory Management System",
-      description: "Developed an automated inventory tracking system that syncs across platforms and sends alerts for low stock levels.",
+      description:
+        "Developed an automated inventory tracking system that syncs across platforms and sends alerts for low stock levels.",
       tools: ["Make", "Shopify", "Workspace"],
-      category: "Inventory Automation"
+      category: "Inventory Automation",
+      media: ["/media/bolt.png"], // Add your image URLs here
     },
     {
       title: "AI-Powered SOP Creation",
-      description: "Implemented a system to generate and maintain SOPs using ChatGPT, saving hours of documentation time.",
+      description:
+        "Implemented a system to generate and maintain SOPs using ChatGPT, saving hours of documentation time.",
       tools: ["ChatGPT", "Make", "Zapier"],
-      category: "Process Automation"
+      category: "Process Automation",
+      media: ["/media/bolt.png"], // Add your image URLs here
     },
   ];
+
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
 
   return (
     <section id="projects" className="bg-muted/30 border-t border-border">
@@ -48,7 +70,20 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="hover-scale overflow-hidden group">
+            <Card
+              key={index}
+              className="hover-scale overflow-hidden group relative"
+              onClick={() => handleProjectClick(project)} // Open modal on card click
+            >
+              {/* Image Preview on Hover */}
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <img
+                  src={project.media[0]} // Assuming the first image in the array is the preview
+                  alt={`Preview for ${project.title}`}
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+
               <CardHeader className="bg-gradient-to-r from-jgreen/10 to-transparent pb-2">
                 <div className="text-sm text-jorange font-medium mb-2">{project.category}</div>
                 <CardTitle className="flex justify-between items-start">
@@ -72,6 +107,15 @@ const ProjectsSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      {selectedProject && (
+        <ProjectModal
+          open={isModalOpen}
+          onOpenChange={handleModalClose}
+          project={selectedProject}
+        />
+      )}
     </section>
   );
 };
