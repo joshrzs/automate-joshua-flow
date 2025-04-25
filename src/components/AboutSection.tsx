@@ -66,10 +66,7 @@ const AboutSection = () => {
   </p>
   <LogoSlider />
 </div>
-
-            <Button asChild className="bg-jgreen hover:bg-jgreen-dark">
-              <a href="#contact">Get In Touch</a>
-            </Button>
+    
           </div>
 
           {/* Right Column: Image + Education */}
