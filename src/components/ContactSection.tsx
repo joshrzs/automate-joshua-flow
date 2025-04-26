@@ -1,63 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Mail, Send } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      const response = await fetch('https://formspree.io/f/mqapjdbn', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Message sent!",
-          description: "Thanks for reaching out. I'll get back to you soon.",
-        });
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+  const handleToast = () => {
+    toast({
+      title: 'Message sent!',
+      description: 'Thanks for reaching out. I’ll get back to you soon.',
+    });
   };
 
   return (
@@ -90,7 +47,7 @@ const ContactSection = () => {
                 </div>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="p-6 flex items-start gap-4">
                 <div className="bg-jgreen/10 p-3 rounded-full">
@@ -104,11 +61,11 @@ const ContactSection = () => {
                 </div>
               </CardContent>
             </Card>
-            
+
             <div className="p-6 bg-gradient-to-br from-jgreen to-jgreen-dark text-white rounded-xl">
               <h3 className="font-medium text-xl mb-3">Ready to automate your business?</h3>
               <p className="mb-4 text-white/90">
-              I typically respond within 24 hours. Feel free to reach out. I'm here to help make things easier for you.
+                I typically respond within 24 hours. Feel free to reach out. I'm here to help make things easier for you.
               </p>
               <Button asChild className="bg-jorange text-white hover:bg-white/90">
                 <a href="mailto:joshbalando@gmail.com" className="flex items-center gap-2">
@@ -117,68 +74,45 @@ const ContactSection = () => {
               </Button>
             </div>
           </div>
-          
+
           <div className="lg:w-2/3">
             <Card>
               <CardContent className="p-6 md:p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  action="https://getform.io/f/broyzyra"
+                  method="POST"
+                  className="space-y-6"
+                  onSubmit={handleToast}
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Your Name</Label>
-                      <Input 
-                        id="name" 
-                        name="name" 
-                        placeholder="John Doe" 
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                      />
+                      <Input id="name" name="name" placeholder="John Doe" required />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Your Email</Label>
-                      <Input 
-                        id="email" 
-                        name="email" 
-                        type="email" 
-                        placeholder="john@example.com" 
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
+                      <Input id="email" name="email" type="email" placeholder="john@example.com" required />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input 
-                      id="subject" 
-                      name="subject" 
-                      placeholder="How can I help you?" 
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                    />
+                    <Input id="subject" name="subject" placeholder="How can I help you?" required />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="message">Your Message</Label>
-                    <Textarea 
-                      id="message" 
-                      name="message" 
-                      placeholder="Tell me about your project..." 
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell me about your project..."
                       rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
                       required
                     />
                   </div>
-                  
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-jgreen hover:bg-jgreen-dark"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+
+                  <Button type="submit" className="w-full bg-jgreen hover:bg-jgreen-dark">
+                    Send Message
                   </Button>
                 </form>
               </CardContent>
