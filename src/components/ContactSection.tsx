@@ -111,7 +111,7 @@ const ContactSection = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-jgreen hover:bg-jgreen-dark">
+                  <Button type="submit" className="w-full bg-jgreen text-white hover:bg-jgreen-dark">
                     Send Message
                   </Button>
                 </form>

@@ -22,12 +22,12 @@ const HeroSection = () => {
               Automating the boring stuff so you don't have to.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            <Button asChild variant="outline" size="lg" className="bg-jorange border-jgreen text-white hover:bg-jorange-dark">
+            <Button asChild variant="outline" size="lg" className="bg-jorange border-white text-white hover:bg-jorange-dark">
                 <a href="#contact" className="flex items-center gap-2">
                   Let's Automate <ArrowRight size={16} />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-jgreen text-jgreen hover:bg-jgreen-dark">
+              <Button asChild variant="outline" size="lg" className="bg-jgreen border-white text-white hover:bg-jgreen-dark">
                 <a href="#projects" className="flex items-center gap-2">
                   View My Work <ArrowRight size={16} />
                 </a>
