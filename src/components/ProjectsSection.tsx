@@ -10,12 +10,12 @@ const ProjectsSection = () => {
   // Multiple projects with different media, descriptions, and tools
   const projects = [
     {
-      title: "Automated Lead Capture to CRM",
+      title: "Automated Lead Nurturing & Appointment Scheduling",
       description:
-        "Built a seamless lead capture system that automatically imports leads from multiple sources into GoHighLevel CRM, with follow-up sequence.",
-      tools: ["Zapier", "GHL", "Make"],
-      category: "CRM Automation",
-      media: ["/media/bolt.png"], // Add your image URLs here
+        "Created an automated system within GoHighLevel that captures leads, nurtures them through valuable content via Workflows, and invites scheduling through Calendar.",
+      tools: ["Form Builder", "Workflows", "Pipelines", "Calendar"],
+      category: "Marketing Automation",
+      media: ["/media/sample.png"], // Add your image URLs here
     },
     {
       title: "Shopify + GoHighLevel Integration",
@@ -76,7 +76,7 @@ const ProjectsSection = () => {
               onClick={() => handleProjectClick(project)} // Open modal on card click
             >
               {/* Image Preview on Hover */}
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-x-0 top-11 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <img
                   src={project.media[0]} // Assuming the first image in the array is the preview
                   alt={`Preview for ${project.title}`}
@@ -84,7 +84,7 @@ const ProjectsSection = () => {
                 />
               </div>
 
-              <CardHeader className="bg-gradient-to-r from-jgreen/10 to-transparent pb-2">
+              <CardHeader className="bg-gradient-to-r from-jgreen/10 to-transparent pb-2 relative z-10">
                 <div className="text-sm text-jorange font-medium mb-2">{project.category}</div>
                 <CardTitle className="flex justify-between items-start">
                   {project.title}
