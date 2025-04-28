@@ -15,7 +15,7 @@ const ProjectsSection = () => {
         "Created an automated system within GoHighLevel that captures leads, nurtures them through valuable content via Workflows, and invites scheduling through Calendar.",
       tools: ["Form Builder", "Workflows", "Pipelines", "Calendar"],
       category: "Marketing Automation",
-      media: ["/media/sample.png"], // Add your image URLs here
+      media: ["/media/MarketingAutomation.mp4"], // The video for this project
     },
     {
       title: "Shopify + GoHighLevel Integration",
@@ -23,7 +23,7 @@ const ProjectsSection = () => {
         "Created a two-way sync between Shopify and GoHighLevel to unify customer data and automate order follow-up sequences.",
       tools: ["Shopify", "GHL", "Zapier"],
       category: "E-commerce Automation",
-      media: ["/media/bolt.png"], // Add your image URLs here
+      media: ["/media/bolt.png"], // Image for this project
     },
     {
       title: "Inventory Management System",
@@ -31,7 +31,7 @@ const ProjectsSection = () => {
         "Developed an automated inventory tracking system that syncs across platforms and sends alerts for low stock levels.",
       tools: ["Make", "Shopify", "Workspace"],
       category: "Inventory Automation",
-      media: ["/media/bolt.png"], // Add your image URLs here
+      media: ["/media/bolt.png"], // Image for this project
     },
     {
       title: "AI-Powered SOP Creation",
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
         "Implemented a system to generate and maintain SOPs using ChatGPT, saving hours of documentation time.",
       tools: ["ChatGPT", "Make", "Zapier"],
       category: "Process Automation",
-      media: ["/media/bolt.png"], // Add your image URLs here
+      media: ["/media/bolt.png"], // Image for this project
     },
   ];
 
@@ -75,13 +75,24 @@ const ProjectsSection = () => {
               className="hover-scale overflow-hidden group relative"
               onClick={() => handleProjectClick(project)} // Open modal on card click
             >
-              {/* Image Preview on Hover */}
+              {/* Video Preview on Hover (if media is video) */}
               <div className="absolute inset-x-0 top-11 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <img
-                  src={project.media[0]} // Assuming the first image in the array is the preview
-                  alt={`Preview for ${project.title}`}
-                  className="w-full h-full object-cover rounded-xl"
-                />
+                {project.media[0].endsWith(".mp4") ? (
+                  <video
+                    className="w-full h-full object-cover rounded-xl"
+                    src={project.media[0]}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                ) : (
+                  <img
+                    src={project.media[0]} // Image preview
+                    alt={`Preview for ${project.title}`}
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                )}
               </div>
 
               <CardHeader className="bg-gradient-to-r from-jgreen/10 to-transparent pb-2 relative z-10">
