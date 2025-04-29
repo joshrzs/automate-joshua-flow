@@ -1,8 +1,7 @@
 import React from 'react';
 import { CheckCircle, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import LogoSlider from '@/components/ui/LogoSlider';
-
+import LogoGrid from '@/components/ui/LogoGrid';  // Use the grid version here
 
 const AboutSection = () => {
   const skills = [
@@ -62,18 +61,16 @@ const AboutSection = () => {
             <br />
 
             <div className="mb-8">
-  <p className="text-3xl md:text-4xl font-bold mb-6">Tools I <span className="text-jorange">Work With</span>
-  </p>
-  <LogoSlider />
-</div>
-    
+              <p className="text-3xl md:text-4xl font-bold mb-6">Tools I <span className="text-jorange">Work With</span>
+              </p>
+              <LogoGrid /> {/* Replace LogoSlider with LogoGrid for the hover effect */}
+            </div>
           </div>
 
           {/* Right Column: Image + Education */}
           <div className="lg:w-2/5 w-full flex flex-col items-center lg:items-start mb-8 lg:mb-0">
             {/* Image Section */}
             <div className="w-full max-w-[340px] mb-6">
-
               <img
                 src="/lovable-uploads/aboutsec.png"
                 alt="Joshua Balando - AI Automation Specialist"
@@ -104,8 +101,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-
-
-
-
-
