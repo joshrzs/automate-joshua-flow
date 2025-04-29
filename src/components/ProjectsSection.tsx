@@ -15,15 +15,15 @@ const ProjectsSection = () => {
         "Created an automated system within GoHighLevel that captures leads, nurtures them through valuable content via Workflows, and invites scheduling through Calendar.",
       tools: ["Form Builder", "Workflows", "Pipelines", "Calendar"],
       category: "Marketing Automation",
-      media: ["/media/MarketingAutomation.mp4"], // The video for this project
+      media: ["/media/LeadCapture.mp4"], // The video for this project
     },
     {
-      title: "Shopify + GoHighLevel Integration",
+      title: "Discovery Call Booking Automation",
       description:
-        "Created a two-way sync between Shopify and GoHighLevel to unify customer data and automate order follow-up sequences.",
-      tools: ["Shopify", "GHL", "Zapier"],
-      category: "E-commerce Automation",
-      media: ["/media/bolt.png"], // Image for this project
+        "Built a dedicated automation in GoHighLevel that invites nurtured leads to book a discovery call, tracks responses through the pipeline, and sends confirmation emails upon booking.",
+      tools: ["Workflows", "Calendars", "Pipelines", "Email Builder"],
+      category: "Marketing Automation",
+      media: ["/media/WINP.png"], // Image for this project
     },
     {
       title: "Inventory Management System",
@@ -31,7 +31,7 @@ const ProjectsSection = () => {
         "Developed an automated inventory tracking system that syncs across platforms and sends alerts for low stock levels.",
       tools: ["Make", "Shopify", "Workspace"],
       category: "Inventory Automation",
-      media: ["/media/bolt.png"], // Image for this project
+      media: ["/media/WINP.png"], // Image for this project
     },
     {
       title: "AI-Powered SOP Creation",
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
         "Implemented a system to generate and maintain SOPs using ChatGPT, saving hours of documentation time.",
       tools: ["ChatGPT", "Make", "Zapier"],
       category: "Process Automation",
-      media: ["/media/bolt.png"], // Image for this project
+      media: ["/media/WINP.png"], // Image for this project
     },
   ];
 
