@@ -22,29 +22,24 @@ const logos = [
 
 const LogoGrid = () => {
   return (
-    <div className="relative w-full py-8 px-4">
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1.5">
-        {logos.map((logo, index) => (
-          <div
-            key={index}
-            className="relative group flex justify-center items-center p-4 border-2 border-jgreen rounded-lg"
-          >
-            {/* Logo */}
-            <img
-              src={logo.src}
-              alt={`Logo ${index}`}
-              className="h-12 w-auto object-contain transition duration-300 ease-in-out z-10 group-hover:scale-110 group-hover:shadow-lg"
-            />
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+      {logos.map((logo, index) => (
+        <div
+          key={index}
+          className="relative group flex justify-center items-center p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-md transition-transform hover:scale-105"
+        >
+          <img
+            src={logo.src}
+            alt={`Logo ${index}`}
+            className="h-12 w-auto object-contain z-10 transition-transform duration-300 ease-in-out group-hover:scale-110"
+          />
 
-            {/* Tooltip (Pop-out Bubble) */}
-            <div className="absolute top-[-40px] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-jorange text-white px-3 py-1 rounded-lg text-xs z-10">
-              <p>{logo.description}</p>
-              {/* Bubble Tail */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 top-full w-3 h-3 bg-jorange rotate-45"></div>
-            </div>
+          <div className="absolute bottom-full mb-3 px-3 py-1 bg-jorange text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 z-20 whitespace-nowrap">
+            {logo.description}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-3 h-3 bg-jorange rotate-45"></div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
