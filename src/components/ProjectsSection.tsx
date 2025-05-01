@@ -23,7 +23,7 @@ const ProjectsSection = () => {
         "Built a dedicated automation in GoHighLevel that invites nurtured leads to book a discovery call, tracks responses through the pipeline, and sends confirmation emails upon booking.",
       tools: ["Workflows", "Calendars", "Pipelines", "Email Builder"],
       category: "Marketing Automation",
-      media: ["/media/WINP.png"], // Image for this project
+      media: ["/media/BookingAutomation.mp4"], // Image for this project
     },
     {
       title: "Inventory Management System",

@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Mail, Send } from 'lucide-react';
+import { MapPin, Mail, Send, Calendar } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
@@ -32,8 +32,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="lg:w-1/3 space-y-6">
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
+          {/* Contact Details Section */}
+          <div className="lg:w-[30%] flex flex-col space-y-6 min-h-[500px]">
             <Card>
               <CardContent className="p-6 flex items-start gap-4">
                 <div className="bg-jgreen/10 p-3 rounded-full">
@@ -55,19 +56,17 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-lg mb-1">Location</h3>
-                  <p className="text-muted-foreground">
-                    Cavite, Philippines
-                  </p>
+                  <p className="text-muted-foreground">Cavite, Philippines</p>
                 </div>
               </CardContent>
             </Card>
 
             <div className="p-6 bg-gradient-to-br from-jgreen to-jgreen-dark text-white rounded-xl">
-              <h3 className="font-medium text-xl mb-3">Ready to automate your business?</h3>
+              <h3 className="font-medium text-xl mb-3">Reach Out Anytime</h3>
               <p className="mb-4 text-white/90">
                 I typically respond within 24 hours. Feel free to reach out. I'm here to help make things easier for you.
               </p>
-              <Button asChild className="bg-jorange text-white hover:bg-white/90">
+              <Button asChild className="bg-jorange text-white hover:bg-jorange-dark/90">
                 <a href="mailto:joshbalando@gmail.com" className="flex items-center gap-2">
                   Email Me <Send className="w-4 h-4" />
                 </a>
@@ -75,13 +74,14 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <div className="lg:w-2/3">
-            <Card>
-              <CardContent className="p-6 md:p-8">
+          {/* Contact Form Section */}
+          <div className="lg:w-[35%] flex flex-col min-h-[500px]">
+            <Card className="flex flex-col flex-grow">
+              <CardContent className="p-6 md:p-8 flex-grow">
                 <form
                   action="https://getform.io/f/broyzyra"
                   method="POST"
-                  className="space-y-6"
+                  className="space-y-6 h-full flex flex-col"
                   onSubmit={handleToast}
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -100,7 +100,7 @@ const ContactSection = () => {
                     <Input id="subject" name="subject" placeholder="How can I help you?" required />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-2 flex-grow">
                     <Label htmlFor="message">Your Message</Label>
                     <Textarea
                       id="message"
@@ -115,6 +115,44 @@ const ContactSection = () => {
                     Send Message
                   </Button>
                 </form>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Calendly Section */}
+          <div className="lg:w-[35%] flex flex-col min-h-[500px]">
+            <Card className="flex flex-col flex-grow">
+              <CardContent className="p-6 flex flex-col gap-4 h-full">
+                {/* Header with icon beside text */}
+                <div className="flex items-center gap-3">
+                  <div className="bg-jgreen/10 p-3 rounded-full">
+                    <Calendar className="text-jgreen w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-lg mb-1">Book a Free Call</h3>
+                    <p className="text-muted-foreground">
+                      Choose a time that works best for you.
+                    </p>
+                  </div>
+                </div>
+
+                <img
+                  src="/media/calendly.jpg"
+                  alt="Calendar Preview"
+                  className="rounded-xl border shadow w-full"
+                />
+
+                <div className="mt-auto">
+                  <Button asChild className="bg-jorange text-white hover:bg-jorange-dark">
+                    <a
+                      href="https://calendly.com/joshbalando"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Book Now
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
