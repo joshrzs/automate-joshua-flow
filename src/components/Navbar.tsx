@@ -1,10 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import "../styles/glow.css";
-
-
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,15 +29,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`sticky top-0 md:fixed md:top-0 md:left-0 w-full z-50 navbar-glow transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-3' : 'py-5 bg-transparent'}`}>
+    <nav className={`sticky top-0 md:fixed md:top-0 md:left-0 w-full z-50 navbar-glow transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-4' : 'py-6 bg-transparent'}`}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex justify-between items-center">
-          {/* Removed Portfolio logo */}
-          <div className="w-10"></div> {/* Empty div for spacing */}
+          <div className="w-10"></div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <ul className="flex space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
+            <ul className="flex space-x-10 text-base md:text-lg">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a 
@@ -53,7 +49,6 @@ const Navbar = () => {
               ))}
             </ul>
             <ThemeToggle />
-            {/* Removed Let's Connect button */}
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -74,7 +69,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-4">
-            <ul className="flex flex-col space-y-4">
+            <ul className="flex flex-col space-y-4 text-base">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a 
@@ -86,7 +81,6 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              {/* Removed Let's Connect button */}
             </ul>
           </div>
         </div>

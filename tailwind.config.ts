@@ -132,6 +132,5 @@ export default {
   },
   plugins: [
     require("tailwindcss-animate"),
-    // Removed @shadcn/ui/tailwind plugin due to incorrect import
   ],
 };
