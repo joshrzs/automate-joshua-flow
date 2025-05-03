@@ -35,9 +35,10 @@ const LogoSliderCards = () => {
               className="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
             />
 
-            <div className="absolute bottom-full mb-3 px-3 py-1 bg-jorange text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 z-50 whitespace-nowrap">
+            {/* Description Box positioned at the top-right */}
+            <div className="absolute top-0 right-0 mt-3 mr-3 px-3 py-1 bg-jorange text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 z-50 whitespace-nowrap">
               {logo.description}
-              <div className="absolute top-full left-1/2 -translate-x-1/2 w-3 h-3 bg-jorange rotate-45"></div>
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 w-3 h-3 bg-jorange rotate-45"></div>
             </div>
           </div>
         ))}

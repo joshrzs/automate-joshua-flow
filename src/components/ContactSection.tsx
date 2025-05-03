@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, forwardRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -7,18 +7,24 @@ import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Mail, Send, Calendar } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
-const ContactSection = () => {
+// Forward ref to ContactSection component
+const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null); // Add the ref here
 
-  const handleToast = () => {
-    toast({
-      title: 'Message sent!',
-      description: 'Thanks for reaching out. I’ll get back to you soon.',
-    });
+  const handleToast = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (formRef.current) {
+      // Handle form submission here if needed
+      toast({
+        title: 'Message sent!',
+        description: 'Thanks for reaching out. I’ll get back to you soon.',
+      });
+    }
   };
 
   return (
-    <section id="contact" className="border-t border-border">
+    <section id="contact" ref={ref} className="border-t border-border">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -79,6 +85,7 @@ const ContactSection = () => {
             <Card className="flex flex-col flex-grow">
               <CardContent className="p-6 md:p-8 flex-grow">
                 <form
+                  ref={formRef} // Attach ref to the form element
                   action="https://getform.io/f/broyzyra"
                   method="POST"
                   className="space-y-6 h-full flex flex-col"
@@ -160,6 +167,9 @@ const ContactSection = () => {
       </div>
     </section>
   );
-};
+});
+
+// Give the component a display name for debugging
+ContactSection.displayName = 'ContactSection';
 
 export default ContactSection;

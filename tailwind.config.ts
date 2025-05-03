@@ -7,9 +7,8 @@ export default {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "./node_modules/@shadcn/ui/**/*.{js,ts,tsx}", // Include ShadCN UI components
+    "./node_modules/@shadcn/ui/**/*.{js,ts,tsx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -20,7 +19,7 @@ export default {
     },
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
+        border: 'hsl(var(--border))', // Make sure this is set correctly
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',

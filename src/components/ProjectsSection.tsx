@@ -1,14 +1,25 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
 import ProjectModal from "./ProjectModal"; // Path to your modal component
 
-const ProjectsSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+interface Project {
+  title: string;
+  description: string;
+  tools: string[];
+  category: string;
+  media: string[];
+}
 
-  // Multiple projects with different media, descriptions, and tools
-  const projects = [
+interface ProjectsSectionProps {
+  // Any additional props you may have
+}
+
+const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>((props, ref) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const projects: Project[] = [
     {
       title: "Automated Lead Nurturing & Appointment Scheduling",
       description:
@@ -43,7 +54,7 @@ const ProjectsSection = () => {
     },
   ];
 
-  const handleProjectClick = (project) => {
+  const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
@@ -54,7 +65,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="bg-muted/30 border-t border-border">
+    <section ref={ref} id="projects" className="bg-muted/30 border-t border-border">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -129,6 +140,8 @@ const ProjectsSection = () => {
       )}
     </section>
   );
-};
+});
+
+ProjectsSection.displayName = "ProjectsSection";
 
 export default ProjectsSection;

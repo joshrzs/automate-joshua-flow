@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { BrainCircuit, BrainCog, BrainCogIcon, BrainIcon, CheckCircle, CloudCog, CogIcon, GraduationCap, Heading1, LucideWrench, PenOffIcon, PenSquare, PenToolIcon, Wrench } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import LogoSliderCards from '@/components/ui/LogoSliderCards';
 
-const AboutSection = () => {
+// Forward ref to AboutSection component
+const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const skills = [
-    "Zapier & Make Automation",
     "GoHighLevel CRM Workflows",
-    "ChatGPT & AI Integration",
-    "Shopify Integration",
+    "Zapier & Make Automation",
+    "API & Webhook Integrations",
+    "CRM Data Management",
     "Process Optimization",
     "No-Code/Low-Code Solutions"
   ];
@@ -32,7 +33,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="relative border-t border-border">
+    <section id="about" className="relative border-t border-border" ref={ref}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="mb-8">
           <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -45,19 +46,21 @@ const AboutSection = () => {
 
         <div className="flex flex-col-reverse lg:flex-row items-start gap-12">
           <div className="w-full lg:w-3/5">
-            <p className="text-muted-foreground mb-6">
-              Hi, I’m Joshua Balando - Filipino AI Automation Specialist with a degree in IT
-              and years of experience in data entry and administrative support. I started my journey 
-              handling repetitive, time-consuming tasks — and that’s exactly what sparked my passion
-              for automation.
-            </p>
+            <div className="p-8 rounded-lg shadow-lg mb-8">
+              <p className="text-muted-foreground mb-6">
+                Hi, I’m Joshua Balando - Filipino AI Automation Specialist with a degree in IT
+                and years of experience in data entry and administrative support. I started my journey 
+                handling repetitive, time-consuming tasks — and that’s exactly what sparked my passion
+                for automation.
+              </p>
 
-            <p className="text-muted-foreground mb-8">
-              After seeing firsthand how much time and energy gets wasted on manual work, I made it my mission to help
-              businesses streamline their operations through smart, automated systems. I’ve since transitioned into the AI
-              automation space, where I now specialize in building efficient workflows using tools like Zapier, Make, and
-              GoHighLevel — all without the need for complex coding.
-            </p>
+              <p className="text-muted-foreground mb-8">
+                After seeing firsthand how much time and energy gets wasted on manual work, I made it my mission to help
+                businesses streamline their operations through smart, automated systems. I’ve since transitioned into the AI
+                automation space, where I now specialize in building efficient workflows using tools like Zapier, Make, and
+                GoHighLevel — all without the need for complex coding.
+              </p>
+            </div>
 
             <div className="mb-8 mt-10">
               <h3 className="text-3xl md:text-4xl font-bold mb-6 flex items-center gap-2">
@@ -116,6 +119,9 @@ const AboutSection = () => {
       </div>
     </section>
   );
-};
+});
+
+// Give the component a display name for debugging
+AboutSection.displayName = 'AboutSection';
 
 export default AboutSection;

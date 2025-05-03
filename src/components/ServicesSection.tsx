@@ -1,9 +1,9 @@
-
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Zap, Database, FileSpreadsheet, Layers3Icon, MailCheck } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-const ServicesSection = () => {
+// Forward ref to ServicesSection component
+const ServicesSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const services = [
     {
       title: "Workflow Automation",
@@ -28,7 +28,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="bg-muted/30 border-t border-border">
+    <section id="services" ref={ref} className="bg-muted/30 border-t border-border">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -58,6 +58,9 @@ const ServicesSection = () => {
       </div>
     </section>
   );
-};
+});
+
+// Give the component a display name for debugging
+ServicesSection.displayName = 'ServicesSection';
 
 export default ServicesSection;
