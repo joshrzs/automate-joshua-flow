@@ -35,7 +35,7 @@ const ServicesSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
             My Services
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Solutions I Provide For Your <span className="text-jgreen">Business</span>
+            Solutions I Provide For Your <span className="text-jorange">Business</span>
           </h2>
           <p className="text-muted-foreground">
             I specialize in creating efficient, automated workflows that save time, reduce errors, and help your business scale.

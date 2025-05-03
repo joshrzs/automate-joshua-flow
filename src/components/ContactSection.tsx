@@ -31,7 +31,7 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
             Get In Touch
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Let's Work <span className="text-jgreen">Together</span>
+            Let's Work <span className="text-jorange">Together</span>
           </h2>
           <p className="text-muted-foreground">
             Ready to automate your business processes? Send me a message and let's discuss how I can help you save time and scale faster.

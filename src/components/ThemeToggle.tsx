@@ -39,7 +39,7 @@ const ThemeToggle = () => {
       <Switch 
         checked={darkMode} 
         onCheckedChange={toggleTheme} 
-        className={`${darkMode ? 'bg-jgreen' : 'bg-jorange'}`}
+        className={`${darkMode ? 'bg-jgreen' : 'bg-jorange'} rounded-full`}  // Ensure the switch is rounded and green when dark mode is active
       />
       <Moon size={18} className={`${darkMode ? 'text-jgreen' : 'text-muted-foreground'}`} />
     </div>
