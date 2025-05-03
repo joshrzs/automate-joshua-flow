@@ -65,7 +65,7 @@ const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
             <div className="mb-8 mt-10">
               <h3 className="text-3xl md:text-4xl font-bold mb-6 flex items-center gap-2">
                 <PenSquare className="text-jorange h-7 w-7" />
-                My Skills & <span className="text-jorange">Expertise</span>
+              Skills & <span className="text-jorange">Expertise</span>
               </h3>
               <ul className="list-none pl-0 space-y-4">
                 {skills.map((skill, index) => (
