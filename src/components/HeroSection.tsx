@@ -24,26 +24,27 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
           <div className="lg:w-2/3 space-y-6 text-left">
             <div className="space-y-2">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                Hi, I’m Josh👋<span className="text-jorange">GHL</span>,<br />
-                Workflow & Automation Specialist
-              </h1>
+            <h1 className="w-full text-left text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                     Workflow Automation<br />
+                     That <span className="text-jorange">Drives</span> Results
+            </h1>
+
               <br />
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               Automating the boring stuff so you don't have to.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="bg-jorange border-white text-white hover:bg-jorange-dark"
-              >
-                <a href="#contact" className="flex items-center gap-2">
-                  Let's Automate <ArrowRight size={16} />
-                </a>
-              </Button>
+            <Button
+               asChild
+           variant="outline"
+           size="lg"
+           className="bg-jorange border-white text-white hover:bg-jorange-dark transform transition-all duration-600 ease-in-out animate-bounce">
+  <a href="#contact" className="flex items-center gap-2">
+    Let's Automate <ArrowRight size={16} />
+  </a>
+</Button>
+
               <Button
                 asChild
                 variant="outline"
