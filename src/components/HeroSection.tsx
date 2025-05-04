@@ -2,6 +2,10 @@ import React, { useRef, forwardRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import '../styles/glow.css';  // Correct path
+import '../styles/globals.css';  // Correct path
+
+
 
 const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
   const heroRef = useRef<HTMLElement>(null);
@@ -24,26 +28,26 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
           <div className="lg:w-2/3 space-y-6 text-left">
             <div className="space-y-2">
-            <h1 className="w-full text-left text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                     Workflow Automation<br />
-                     That <span className="text-jorange">Drives</span> Results
-            </h1>
-
+              <h1 className="w-full text-left text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                Workflow Automation<br />
+                That <span className="text-jorange">Drives</span> Results
+              </h1>
               <br />
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               Automating the boring stuff so you don't have to.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            <Button
-               asChild
-           variant="outline"
-           size="lg"
-           className="bg-jorange border-white text-white hover:bg-jorange-dark transform transition-all duration-600 ease-in-out animate-bounce">
-  <a href="#contact" className="flex items-center gap-2">
-    Let's Automate <ArrowRight size={16} />
-  </a>
-</Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="bg-jorange border-white text-white hover:bg-jorange-dark transform transition-all duration-600 ease-in-out animate-bounce"
+              >
+                <a href="#contact" className="flex items-center gap-2">
+                  Let's Automate <ArrowRight size={16} />
+                </a>
+              </Button>
 
               <Button
                 asChild
@@ -100,16 +104,20 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-start relative">
-            <div className="w-[28rem] sm:w-[36rem] md:w-[46rem] lg:w-[52rem] h-auto overflow-hidden relative mx-auto">
-              {/* Profile Image */}
-              <img
-                src="/lovable-uploads/herosec.png"
-                alt="Joshua Balando - AI Automation Specialist"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+          {/* Hexagon with glowing effect */}
+          <div className="flex items-center justify-center min-h-screen">
+  <div className="hexagon-container">
+    <img
+      src="/lovable-uploads/dp.png"
+      alt="Joshua Balando - AI Automation Specialist"
+      className="hexagon-img"
+    />
+  </div>
+</div>
+
+
+
+
         </div>
       </div>
     </section>

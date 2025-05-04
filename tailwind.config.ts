@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       colors: {
-        border: 'hsl(var(--border))', // Make sure this is set correctly
+        border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
@@ -115,6 +115,14 @@ export default {
           '50%': { boxShadow: '0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00' },
           '100%': { boxShadow: '0 0 3px #00FF00, 0 0 6px #00FF00, 0 0 9px #00FF00' },
         },
+        'hex-glow-pulse': {
+          '0%, 100%': {
+            boxShadow: '0 0 20px 5px rgba(255, 153, 0, 0.4)',
+          },
+          '50%': {
+            boxShadow: '0 0 40px 15px rgba(255, 153, 0, 0.8)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -122,6 +130,7 @@ export default {
         'fade-in': 'fade-in 0.5s ease-out forwards',
         glitch: 'glitch 1s infinite',
         'neon-pulse': 'neon-pulse 1.5s infinite',
+        'hex-glow': 'hex-glow-pulse 2s ease-in-out infinite',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
@@ -132,4 +141,10 @@ export default {
   plugins: [
     require("tailwindcss-animate"),
   ],
+  // 💡 Add this for custom hexagon-glow utility
+  safelist: [
+    'hexagon-glow',
+  ],
 };
+
+export default config;
