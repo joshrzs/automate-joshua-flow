@@ -35,7 +35,7 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
               <br />
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              Automating the boring stuff so you don't have to.
+            I'm Josh. I help businesses automate repetitive tasks, freeing up time so they can focus on the bigger picture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Button
@@ -80,7 +80,7 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
               <Tooltip>
                 <TooltipTrigger>
                   <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
-                    GHL
+                    GoHighLevel
                   </div>
                 </TooltipTrigger>
                 <TooltipContent>High-level marketing automation</TooltipContent>
@@ -96,10 +96,10 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
               <Tooltip>
                 <TooltipTrigger>
                   <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
-                    Shopify
+                    Figma
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>E-commerce automation</TooltipContent>
+                <TooltipContent>UI/UX Design Tool</TooltipContent>
               </Tooltip>
             </div>
           </div>
@@ -114,11 +114,9 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
         className="hexagon-img dp-glow"
       />
     </div>
+    
   </div>
 </div>
-
-
-
 
 
         </div>
