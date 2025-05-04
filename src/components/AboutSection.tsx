@@ -8,7 +8,7 @@ const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const skills = [
     "GoHighLevel CRM Workflows",
     "Zapier & Make Automation",
-    "API & Webhook Integrations",
+    "Funnel & Website design",
     "CRM Data Management",
     "Process Optimization",
     "No-Code/Low-Code Solutions"

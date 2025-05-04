@@ -104,16 +104,19 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
             </div>
           </div>
 
-          {/* Hexagon with glowing effect */}
-          <div className="flex items-center justify-center min-h-screen">
+      {/* Hexagon with glowing effect */}
+      <div className="flex items-center justify-center min-h-screen">
   <div className="hexagon-container">
-    <img
-      src="/lovable-uploads/dp.png"
-      alt="Joshua Balando - AI Automation Specialist"
-      className="hexagon-img"
-    />
+    <div className="hexagon-img-wrapper">
+      <img
+        src="/lovable-uploads/dp.png"
+        alt="Joshua Balando - AI Automation Specialist"
+        className="hexagon-img dp-glow"
+      />
+    </div>
   </div>
 </div>
+
 
 
 

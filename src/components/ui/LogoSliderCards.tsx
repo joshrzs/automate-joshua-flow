@@ -13,11 +13,12 @@ const logos = [
   { src: '/logos/clickfunnels.png', description: 'Sales funnels made easy' },
   { src: '/logos/slack.png', description: 'Team communication' },
   { src: '/logos/discord.png', description: 'Chat for communities' },
-  { src: '/logos/typeform.png', description: 'Interactive forms' },
+  { src: '/logos/canva.png', description: 'Design Tool' },
   { src: '/logos/airtable.png', description: 'Database and collaboration' },
   { src: '/logos/notion.png', description: 'Workspace for notes' },
   { src: '/logos/dropbox.png', description: 'Cloud storage' },
   { src: '/logos/workspace.png', description: 'Google Workspace' },
+  { src: '/logos/figma.png', description: 'UI/UX Design' },
 ];
 
 const LogoSliderCards = () => {
