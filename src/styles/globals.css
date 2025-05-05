@@ -36,16 +36,20 @@ a {
   width: 280px;
   height: 330px;
   position: relative;
-  overflow: hidden; /* clips the bottom part */
-  border-radius: 16px;
-  border: 4px solid #FFA500;
-  background: rgba(255, 255, 255, 0.15);
+  /* Removed glow from main shape */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Thin border for glass effect */
+  background: rgba(255, 255, 255, 0.15); /* Same as glassmorph base */
   backdrop-filter: blur(15px);
-  box-shadow: 0 0 30px rgba(255, 153, 0, 0.6);
-  animation: hex-glow-pulse 2s ease-in-out infinite;
+  border-radius: 16px;
+  overflow: hidden;
   z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.hexagon-container:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
+}
 
 /* Rest of your styles */
 .hexagon-img-wrapper {
@@ -73,17 +77,41 @@ a {
   justify-content: center;
   align-items: center;
 }
+.hexagon-shadow-bg {
+  position: absolute;
+  width: 280px;
+  height: 320px;
+  background-color: #1A7F4E; 
+  border-radius: 16px;
+  bottom: -12px;
+  right: -12px;
+  z-index: 0;
 
+}
 
+.dp-glow {
+  filter: drop-shadow(0 0 10px rgba(144, 238, 144, 0.6)) /* Soft light green glow */
+          drop-shadow(0 0 20px rgba(144, 238, 144, 0.4)); /* Slightly brighter for more glow */
+  transition: filter 0.3s ease-in-out;
+}
 
-@keyframes hex-glow-pulse {
+.dp-glow {
+  animation: image-glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes image-glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 10px 2px rgba(255, 153, 0, 0.4);
+    filter: drop-shadow(0 0 10px rgba(144, 238, 144, 0.6)) /* Soft light green glow */
+            drop-shadow(0 0 20px rgba(144, 238, 144, 0.4)); /* Slightly brighter for more glow */
   }
   50% {
-    box-shadow: 0 0 20px 6px rgba(255, 153, 0, 0.8);
+    filter: drop-shadow(0 0 20px rgba(144, 238, 144, 0.9)) /* Stronger green glow */
+            drop-shadow(0 0 30px rgba(144, 238, 144, 0.6)); /* Intense pulse effect */
   }
 }
+
+
+
 
 
 /* --- Glowing Navbar Setup --- */
@@ -106,13 +134,6 @@ a {
   }
 }
 
-.dp-glow {
-  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2))   /* Light bottom-right shadow */
-          drop-shadow(-2px -2px 5px rgba(0, 0, 0, 0.2)) /* Light top-left shadow */
-          drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.15));  /* Stronger outer shadow */
-  border-radius: 16px; /* Optional: to keep rounded corners */
-  z-index: 3;
-}
 
 
 

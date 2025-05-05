@@ -2,6 +2,8 @@ import React, { forwardRef } from 'react';
 import { BrainCircuit, BrainCog, BrainCogIcon, BrainIcon, CheckCircle, CloudCog, CogIcon, GraduationCap, Heading1, LucideWrench, PenOffIcon, PenSquare, PenToolIcon, Wrench } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import LogoSliderCards from '@/components/ui/LogoSliderCards';
+import '../styles/glow.css';  // Correct path
+import '../styles/globals.css';  // Correct path
 
 // Forward ref to AboutSection component
 const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
@@ -88,13 +90,27 @@ const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
 
           <div className="lg:w-2/5 w-full flex flex-col items-center lg:items-start mb-8 lg:mb-0">
             <div className="w-full max-w-[340px] mb-6">
-              <img
-                src="/lovable-uploads/aboutsec.png"
-                alt="Joshua Balando - AI Automation Specialist"
-                className="w-full h-auto object-cover rounded-2xl shadow-lg"
-              />
-            </div>
+            <div className="about-outer-wrapper">
+{/* Hexagon with glowing effect */}
+<div className="flex items-center justify-center min-h-screen">
+  <div className="hexagon-outer-wrapper relative">
+    {/* Background Rectangle Behind */}
+    <div className="hexagon-shadow-bg"></div>
 
+    {/* Main Glowing Hexagon */}
+    <div className="hexagon-container relative z-10">
+      <div className="hexagon-img-wrapper">
+        <img
+          src="/lovable-uploads/dp.png"
+          alt="Joshua Balando - AI Automation Specialist"
+          className="hexagon-img dp-glow"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+            </div>
             <div className="w-full">
               <div className="flex items-center gap-2 mb-4">
                 <GraduationCap className="text-jorange h-5 w-5" />
