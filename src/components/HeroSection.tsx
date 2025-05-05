@@ -104,8 +104,9 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
             </div>
           </div>
 
-      {/* Hexagon with glowing effect */}
-      <div className="flex items-center justify-center min-h-screen">
+{/* Hexagon with glowing effect */}
+<div className="flex items-center justify-center min-h-screen">
+  <div className="hexagon-outer-wrapper">
   <div className="hexagon-container">
     <div className="hexagon-img-wrapper">
       <img
@@ -114,8 +115,9 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
         className="hexagon-img dp-glow"
       />
     </div>
-    
   </div>
+</div>
+
 </div>
 
 

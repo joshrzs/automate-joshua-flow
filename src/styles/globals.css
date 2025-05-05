@@ -34,36 +34,31 @@ a {
 /* --- Glowing Hexagon Image Setup --- */
 .hexagon-container {
   width: 280px;
-  height: 300px;
+  height: 330px;
   position: relative;
-  animation: hex-glow-pulse 2s ease-in-out infinite;
-  box-shadow: 0 0 30px rgba(255, 153, 0, 0.6); /* Keep your existing glowing effect */
-  border: 4px solid #FFA500; /* Glowing border color */
-  background: rgba(255, 255, 255, 0.15); /* Slightly lighter transparent white background for better contrast in light mode */
-  backdrop-filter: blur(15px); /* Stronger blur for better glass effect */
+  overflow: hidden; /* clips the bottom part */
   border-radius: 16px;
-  overflow: visible; /* Allows image to pop out */
+  border: 4px solid #FFA500;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(255, 153, 0, 0.6);
+  animation: hex-glow-pulse 2s ease-in-out infinite;
   z-index: 1;
 }
 
-/* Optional: Darker background for dark mode */
-@media (prefers-color-scheme: dark) {
-  .hexagon-container {
-    background: rgba(255, 255, 255, 0.1); /* Slightly more transparent for dark mode */
-  }
-}
 
 /* Rest of your styles */
 .hexagon-img-wrapper {
   position: absolute;
-  top: -57%; /* Pops out top part of image */
+  top: -33%; /* adjust this to pop the top */
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
-  width: 150%;
-  height: 165%;
+  z-index: 2;
+  width: 140%;
+  height: 155%;
   pointer-events: none;
 }
+
 
 .hexagon-img {
   width: 120%;
@@ -71,12 +66,22 @@ a {
   object-fit: cover;
 }
 
+.hexagon-outer-wrapper {
+  position: relative;
+  overflow: visible; /* allows top part to show */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 @keyframes hex-glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 20px 5px rgba(255, 153, 0, 0.4);
+    box-shadow: 0 0 10px 2px rgba(255, 153, 0, 0.4);
   }
   50% {
-    box-shadow: 0 0 40px 15px rgba(255, 153, 0, 0.8);
+    box-shadow: 0 0 20px 6px rgba(255, 153, 0, 0.8);
   }
 }
 
