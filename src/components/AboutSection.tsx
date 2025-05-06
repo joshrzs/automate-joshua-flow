@@ -64,21 +64,7 @@ const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
               </p>
             </div>
 
-            <div className="mb-8 mt-10">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 flex items-center gap-2">
-                <PenSquare className="text-jorange h-7 w-7" />
-              Skills & <span className="text-jorange">Expertise</span>
-              </h3>
-              <ul className="list-none pl-0 space-y-4">
-                {skills.map((skill, index) => (
-                  <li key={index} className="flex items-start text-foreground font-bold">
-                    <CheckCircle className="text-jgreen mr-3 h-5 w-5 mt-1" />
-                    <span>{skill}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
+       
             <div className="mb-8 mt-10">
               <h3 className="text-3xl md:text-4xl font-bold mb-6 flex items-center gap-2">
                 <Wrench className="text-jorange h-7 w-7" />
@@ -91,25 +77,26 @@ const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
           <div className="lg:w-2/5 w-full flex flex-col items-center lg:items-start mb-8 lg:mb-0">
             <div className="w-full max-w-[340px] mb-6">
             <div className="about-outer-wrapper">
-{/* Hexagon with glowing effect */}
-<div className="flex items-center justify-center min-h-screen">
-  <div className="hexagon-outer-wrapper relative">
-    {/* Background Rectangle Behind */}
-    <div className="hexagon-shadow-bg"></div>
+  {/* Hexagon with glowing effect */}
+  <div className="flex items-center justify-center py-3">
+    <div className="hexagon-outer-wrapper relative">
+      {/* Background Rectangle Behind */}
+      <div className="hexagon-shadow-bg"></div>
 
-    {/* Main Glowing Hexagon */}
-    <div className="hexagon-container relative z-10">
-      <div className="hexagon-img-wrapper">
-        <img
-          src="/lovable-uploads/dp.png"
-          alt="Joshua Balando - AI Automation Specialist"
-          className="hexagon-img dp-glow"
-        />
+      {/* Main Glowing Hexagon */}
+      <div className="hexagon-container relative z-10">
+        <div className="hexagon-img-wrapper">
+          <img
+            src="/lovable-uploads/dp.png"
+            alt="Joshua Balando - AI Automation Specialist"
+            className="hexagon-img dp-glow"
+          />
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
+
             </div>
             <div className="w-full">
               <div className="flex items-center gap-2 mb-4">

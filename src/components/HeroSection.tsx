@@ -35,7 +35,7 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
               <br />
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            I'm Josh. I help businesses automate repetitive tasks, freeing up time so they can focus on the bigger picture.
+           I help businesses automate repetitive tasks, freeing up time so they can focus on the bigger picture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Button
@@ -104,24 +104,17 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
             </div>
           </div>
 
-{/* Hexagon with glowing effect */}
-<div className="flex items-center justify-center min-h-screen">
-  <div className="hexagon-outer-wrapper relative">
-    {/* Background Rectangle Behind */}
-    <div className="hexagon-shadow-bg"></div>
-
-    {/* Main Glowing Hexagon */}
-    <div className="hexagon-container relative z-10">
-      <div className="hexagon-img-wrapper">
-        <img
-          src="/lovable-uploads/dp.png"
-          alt="Joshua Balando - AI Automation Specialist"
-          className="hexagon-img dp-glow"
-        />
-      </div>
-    </div>
-  </div>
+          <div
+  className="w-full h-screen bg-no-repeat bg-center"
+  style={{
+    backgroundImage: "url('/lovable-uploads/vis.svg')",
+    backgroundSize: "auto 70%",  // Shrink to 80% of the height
+    backgroundPosition: "center",  // Keeps the image centered
+  }}
+>
+  {/* Optional: Add content inside here */}
 </div>
+
 
 
 
