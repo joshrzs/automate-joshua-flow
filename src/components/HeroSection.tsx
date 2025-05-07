@@ -105,12 +105,13 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
           </div>
 
           <div
-  className="w-full h-screen bg-no-repeat bg-center"
-  style={{
-    backgroundImage: "url('/lovable-uploads/vis.svg')",
-    backgroundSize: "auto 70%",  // Shrink to 80% of the height
-    backgroundPosition: "center",  // Keeps the image centered
-  }}
+className="w-full h-screen bg-no-repeat bg-center"
+style={{
+  backgroundImage: "url('/lovable-uploads/herodp.png')",
+  backgroundSize: "auto 60%", // Shrinks the SVG image to 65% of container height
+  backgroundPosition: "calc(50% + 20px) center", // Moves the image 20px to the right
+}}
+
 >
   {/* Optional: Add content inside here */}
 </div>

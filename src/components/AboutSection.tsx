@@ -50,9 +50,8 @@ const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
           <div className="w-full lg:w-3/5">
             <div className="p-8 rounded-lg shadow-lg mb-8">
               <p className="text-muted-foreground mb-6">
-                Hi, I’m Joshua Balando - Filipino AI Automation Specialist with a degree in IT
-                and years of experience in data entry and administrative support. I started my journey 
-                handling repetitive, time-consuming tasks — and that’s exactly what sparked my passion
+                Hi, I’m Joshua Balando - an AI Automation Specialist. With a degree in IT and years of hands-on experience in data entry and administrative support. I started my journey 
+                handling repetitive, time-consuming tasks - and that’s exactly what sparked my passion
                 for automation.
               </p>
 
@@ -60,7 +59,7 @@ const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 After seeing firsthand how much time and energy gets wasted on manual work, I made it my mission to help
                 businesses streamline their operations through smart, automated systems. I’ve since transitioned into the AI
                 automation space, where I now specialize in building efficient workflows using tools like Zapier, Make, and
-                GoHighLevel — all without the need for complex coding.
+                GoHighLevel - all without the need for complex coding.
               </p>
             </div>
 
