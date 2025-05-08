@@ -38,50 +38,10 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
-          {/* Contact Details Section */}
-          <div className="lg:w-[30%] flex flex-col space-y-6 min-h-[500px]">
-            <Card>
-              <CardContent className="p-6 flex items-start gap-4">
-                <div className="bg-jgreen/10 p-3 rounded-full">
-                  <Mail className="text-jgreen w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-lg mb-1">Email Me</h3>
-                  <a href="mailto:joshbalando@gmail.com" className="text-muted-foreground hover:text-jgreen transition-colors">
-                    joshbalando@gmail.com
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 flex items-start gap-4">
-                <div className="bg-jgreen/10 p-3 rounded-full">
-                  <MapPin className="text-jgreen w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-lg mb-1">Location</h3>
-                  <p className="text-muted-foreground">Cavite, Philippines</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <div className="p-6 bg-gradient-to-br from-jgreen to-jgreen-dark text-white rounded-xl">
-              <h3 className="font-medium text-xl mb-3">Reach Out Anytime</h3>
-              <p className="mb-4 text-white/90">
-                I typically respond within 24 hours. Feel free to reach out. I'm here to help make things easier for you.
-              </p>
-              <Button asChild className="bg-jorange text-white hover:bg-jorange-dark/90">
-                <a href="mailto:joshbalando@gmail.com" className="flex items-center gap-2">
-                  Email Me <Send className="w-4 h-4" />
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          {/* Contact Form Section */}
-          <div className="lg:w-[35%] flex flex-col min-h-[500px]">
+        <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
+          {/* Combined Contact Form and Contact Details Section */}
+          <div className="lg:w-1/2 flex flex-col gap-8">
+            {/* Contact Form Section */}
             <Card className="flex flex-col flex-grow">
               <CardContent className="p-6 md:p-8 flex-grow">
                 <form
@@ -124,13 +84,53 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 </form>
               </CardContent>
             </Card>
+
+            {/* Contact Details Section (Located Inside the Form) */}
+            <div className="space-y-6">
+              <Card>
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="bg-jgreen/10 p-3 rounded-full">
+                    <Mail className="text-jgreen w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-lg mb-1">Email Me</h3>
+                    <a href="mailto:joshbalando@gmail.com" className="text-muted-foreground hover:text-jgreen transition-colors">
+                      joshbalando@gmail.com
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="bg-jgreen/10 p-3 rounded-full">
+                    <MapPin className="text-jgreen w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-lg mb-1">Location</h3>
+                    <p className="text-muted-foreground">Cavite, Philippines</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="p-6 bg-gradient-to-br from-jgreen to-jgreen-dark text-white rounded-xl">
+                <h3 className="font-medium text-xl mb-3">Reach Out Anytime</h3>
+                <p className="mb-4 text-white/90">
+                  I typically respond within 24 hours. Feel free to reach out. I'm here to help make things easier for you.
+                </p>
+                <Button asChild className="bg-jorange text-white hover:bg-jorange-dark/90">
+                  <a href="mailto:joshbalando@gmail.com" className="flex items-center gap-2">
+                    Email Me <Send className="w-4 h-4" />
+                  </a>
+                </Button>
+              </div>
+            </div>
           </div>
 
-          {/* Calendly Section */}
-          <div className="lg:w-[35%] flex flex-col min-h-[500px]">
+          {/* Booking Section (50% Width) */}
+          <div className="lg:w-1/2 flex flex-col min-h-[500px]">
             <Card className="flex flex-col flex-grow">
               <CardContent className="p-6 flex flex-col gap-4 h-full">
-                {/* Header with icon beside text */}
                 <div className="flex items-center gap-3">
                   <div className="bg-jgreen/10 p-3 rounded-full">
                     <Calendar className="text-jgreen w-6 h-6" />
