@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: 'media', // Ensure this is 'media' to detect user preference for dark mode, or 'class' for a forced approach
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -141,9 +141,12 @@ const config: Config = {
   plugins: [
     require("tailwindcss-animate"),
   ],
+  // 💡 Add this for custom hexagon-glow utility
   safelist: [
     'hexagon-glow',
   ],
 };
 
 export default config;
+
+

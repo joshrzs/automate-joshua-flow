@@ -5,8 +5,6 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 import '../styles/glow.css';  // Correct path
 import '../styles/globals.css';  // Correct path
 
-
-
 const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
   const heroRef = useRef<HTMLElement>(null);
 
@@ -34,7 +32,7 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
               <br />
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            Helping your business automate repetitive tasks, freeing up time so you can focus on the bigger picture.
+              Helping your business automate repetitive tasks, freeing up time so you can focus on the bigger picture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Button
@@ -104,20 +102,15 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
           </div>
 
           <div
-className="w-full h-screen bg-no-repeat bg-center"
-style={{
-  backgroundImage: "url('/lovable-uploads/herodp.png')",
-  backgroundSize: "auto 60%", // Shrinks the  image to 65% of container height
-  backgroundPosition: "calc(50% + 20px) center", // Moves the image 20px to the right
-}}
-
->
-  {/* Optional: Add content inside here */}
-</div>
-
-
-
-
+            className="w-full h-screen bg-no-repeat bg-center"
+            style={{
+              backgroundImage: "url('/lovable-uploads/herodp.png')",
+              backgroundSize: "cover", // Makes the image cover the entire container without getting cropped
+              backgroundPosition: "center", // Keeps the image centered
+            }}
+          >
+            {/* Optional: Add content inside here */}
+          </div>
         </div>
       </div>
     </section>
