@@ -84,7 +84,7 @@ const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>((props,
             My Projects
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Automation <span className="text-jorange">Projects</span> That Drive Results
+            Automation <span className="text-jorange">Projects</span> That Generates Results
           </h2>
           <p className="text-muted-foreground">
             Explore some of the custom automation solutions I've created for businesses to save time, reduce errors, and scale more efficiently.

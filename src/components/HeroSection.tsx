@@ -27,7 +27,7 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
           <div className="lg:w-2/3 space-y-6 text-left">
             <div className="space-y-2">
               <h1 className="w-full text-left text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                Workflow Automation <br/> That <span className="text-jorange">Drives</span> Results
+                Workflow Automation <br /> That <span className="text-jorange">Drives</span> Results
               </h1>
               <br />
             </div>
@@ -102,10 +102,10 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
           </div>
 
           <div
-            className="w-full h-screen bg-no-repeat bg-center"
+            className="w-full max-w-md mx-auto aspect-[3/2] bg-no-repeat bg-center transform scale-170"  // Increased scale by 10%
             style={{
               backgroundImage: "url('/lovable-uploads/herodp.png')",
-              backgroundSize: "cover", // Makes the image cover the entire container without getting cropped
+              backgroundSize: "contain", // Makes the image fit within the container
               backgroundPosition: "center", // Keeps the image centered
             }}
           >
