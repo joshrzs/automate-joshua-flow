@@ -1,21 +1,10 @@
 import React, { forwardRef } from 'react';
-import { BrainCircuit, BrainCog, BrainCogIcon, BrainIcon, CheckCircle, CloudCog, CogIcon, GraduationCap, Heading1, LucideWrench, PenOffIcon, PenSquare, PenToolIcon, Wrench } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import LogoSliderCards from '@/components/ui/LogoSliderCards';
+import { GraduationCap, CheckCircle } from 'lucide-react';
 import '../styles/glow.css';  // Correct path
 import '../styles/globals.css';  // Correct path
 
 // Forward ref to AboutSection component
 const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
-  const skills = [
-    "GoHighLevel CRM Workflows",
-    "Zapier & Make Automation",
-    "Funnel & Website design",
-    "CRM Data Management",
-    "Process Optimization",
-    "No-Code/Low-Code Solutions"
-  ];
-
   const education = [
     {
       degree: "Bachelor of Science in Information Technology",
@@ -62,68 +51,61 @@ const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 GoHighLevel - all without the need for complex coding.
               </p>
             </div>
-
-       
-            <div className="mb-8 mt-10">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 flex items-center gap-2">
-                <Wrench className="text-jorange h-7 w-7" />
-                Tools I <span className="text-jorange">Work With</span>
-              </h3>
-              <LogoSliderCards />
-            </div>
           </div>
 
           <div className="lg:w-2/5 w-full flex flex-col items-center lg:items-start mb-8 lg:mb-0">
             <div className="w-full max-w-[340px] mb-6">
-            <div className="about-outer-wrapper">
-  {/* Hexagon with glowing effect */}
-  <div className="flex items-center justify-center py-3">
-    <div className="hexagon-outer-wrapper relative">
-      {/* Background Rectangle Behind */}
-      <div className="hexagon-shadow-bg"></div>
+              <div className="about-outer-wrapper">
+                {/* Hexagon with glowing effect */}
+                <div className="flex items-center justify-center py-3">
+                  <div className="hexagon-outer-wrapper relative">
+                    {/* Background Rectangle Behind */}
+                    <div className="hexagon-shadow-bg"></div>
 
-      {/* Main Glowing Hexagon */}
-      <div className="hexagon-container relative z-10">
-        <div className="hexagon-img-wrapper">
-          <img
-            src="/lovable-uploads/dp.png"
-            alt="Joshua Balando - AI Automation Specialist"
-            className="hexagon-img dp-glow"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-            </div>
-            <div className="w-full">
-              <div className="flex items-center gap-2 mb-4">
-                <GraduationCap className="text-jorange h-5 w-5" />
-                <h3 className="text-lg font-medium">Education & <span className="text-jorange">Job Experience</span></h3>
-              </div>
-              <ul className="list-none pl-0 space-y-4">
-                {education.map((item, index) => (
-                  <li key={index} className="flex items-start text-foreground font-bold">
-                    <CheckCircle className="text-jgreen mr-3 h-5 w-5 mt-1" />
-                    <div>
-                      <p className="font-bold">{item.degree}</p>
-                      <p className="text-sm text-muted-foreground font-normal">
-                        {item.institution} | {item.period}
-                      </p>
+                    {/* Main Glowing Hexagon */}
+                    <div className="hexagon-container relative z-10">
+                      <div className="hexagon-img-wrapper">
+                        <img
+                          src="/lovable-uploads/dp.png"
+                          alt="Joshua Balando - AI Automation Specialist"
+                          className="hexagon-img dp-glow"
+                        />
+                      </div>
                     </div>
-                  </li>
-                ))}
-              </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Moved Education & Job Experience section further upward */}
+        <div className="lg:w-2/5 w-full mt-0 mb-6">
+          <div className="flex items-center gap-2 mb-4">
+            <GraduationCap className="text-jorange h-9 w-9" />
+            <h3 className="text-3xl md:text-4xl font-bold text-center">
+              Education & <span className="text-jorange">Job Experience</span>
+            </h3>
+          </div>
+          <ul className="list-none pl-0 space-y-4">
+            {education.map((item, index) => (
+              <li key={index} className="flex items-start text-foreground font-bold">
+                <CheckCircle className="text-jgreen mr-5 h-7 w-7 mt-1" />
+                <div>
+                  <p className="font-bold">{item.degree}</p>
+                  <p className="text-sm text-muted-foreground font-normal">
+                    {item.institution} | {item.period}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
   );
 });
 
-// Give the component a display name for debugging
 AboutSection.displayName = 'AboutSection';
 
 export default AboutSection;

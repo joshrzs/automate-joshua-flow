@@ -1,95 +1,120 @@
-import React, { useState, useEffect } from 'react';
-import ThemeToggle from './ThemeToggle';
-import "../styles/glow.css";
+import React, { useRef, forwardRef } from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import '../styles/glow.css';  // Correct path
+import '../styles/globals.css';  // Correct path
 
-const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
+  const heroRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
-  ];
-
-  const handleLinkClick = () => {
-    // Close the menu when a link is clicked
-    setIsMobileMenuOpen(false);
+  // You can now use heroRef to interact with the HeroSection DOM, for example:
+  // Scroll into view or track visibility
+  const handleScrollIntoView = () => {
+    if (heroRef.current) {
+      heroRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
-    <nav className={`sticky top-0 md:fixed md:top-0 md:left-0 w-full z-50 navbar-glow transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-4' : 'py-6 bg-transparent'}`}>
+    <section
+      id="home"
+      ref={ref || heroRef}  // Attach the ref here to the section element
+      className="min-h-screen flex items-center pt-30 pb-10 bg-gradient-to-br from-background to-muted/30"
+    >
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex justify-between items-center">
-          <div className="w-10"></div>
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
+          <div className="lg:w-2/3 space-y-6 text-left">
+            <div className="space-y-2">
+              <h1 className="w-full text-left text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                Workflow Automation <br /> That <span className="text-jorange">Drives</span> Results
+              </h1>
+              <br />
+            </div>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              Helping your business automate repetitive tasks, freeing up time so you can focus on the bigger picture.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="bg-jorange border-white text-white hover:bg-jorange-dark transform transition-all duration-600 ease-in-out animate-bounce"
+              >
+                <a href="#contact" className="flex items-center gap-2">
+                  Let's Automate <ArrowRight size={16} />
+                </a>
+              </Button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-10">
-            <ul className="flex space-x-10 text-base md:text-lg">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href} 
-                    className="text-foreground hover:text-jorange transition-colors duration-300"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <ThemeToggle />
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="bg-jgreen border-white text-white hover:bg-jgreen-dark"
+              >
+                <a href="#projects" className="flex items-center gap-2">
+                  View My Work <ArrowRight size={16} />
+                </a>
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-start pt-6 animate-fade-in" style={{ animationDelay: '1s' }}>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
+                    Zapier
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>Automation made simple</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
+                    Make
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>Advanced workflow automation</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
+                    GoHighLevel
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>High-level marketing automation</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
+                    ChatGPT
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>AI-powered solutions</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
+                    Figma
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>UI/UX Design Tool</TooltipContent>
+              </Tooltip>
+            </div>
           </div>
 
-          {/* Mobile Navigation */}
-          <div className="md:hidden flex items-center">
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
-              className="text-foreground focus:outline-none"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 glowing-lines">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
+          <div
+            className="w-full max-w-md mx-auto aspect-[3/2] bg-no-repeat bg-center transform scale-170"  // Increased scale by 10%
+            style={{
+              backgroundImage: "url('/lovable-uploads/herodp.png')",
+              backgroundSize: "contain", // Makes the image fit within the container
+              backgroundPosition: "center", // Keeps the image centered
+            }}
+          >
+            {/* Optional: Add content inside here */}
           </div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-background py-4 px-6">
-          <ul className="space-y-4 text-lg">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a 
-                  href={link.href} 
-                  className="text-foreground hover:text-jorange transition-colors duration-300"
-                  onClick={handleLinkClick} // Close the menu when a link is clicked
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ThemeToggle />
-        </div>
-      )}
-    </nav>
+    </section>
   );
-};
+});
 
-export default Navbar;
+export default HeroSection;

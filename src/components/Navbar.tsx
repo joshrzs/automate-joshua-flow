@@ -4,7 +4,7 @@ import "../styles/glow.css";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // To toggle mobile menu
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +26,11 @@ const Navbar = () => {
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const handleLinkClick = () => {
+    // Close the menu when a link is clicked
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <nav className={`sticky top-0 md:fixed md:top-0 md:left-0 w-full z-50 navbar-glow transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-sm shadow-md py-4' : 'py-6 bg-transparent'}`}>
@@ -56,7 +61,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
               className="text-foreground focus:outline-none"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 glowing-lines">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
@@ -73,6 +78,7 @@ const Navbar = () => {
                 <a 
                   href={link.href} 
                   className="text-foreground hover:text-jorange transition-colors duration-300"
+                  onClick={handleLinkClick} // Close the menu when a link is clicked
                 >
                   {link.name}
                 </a>
