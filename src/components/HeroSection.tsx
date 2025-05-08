@@ -29,13 +29,12 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
           <div className="lg:w-2/3 space-y-6 text-left">
             <div className="space-y-2">
               <h1 className="w-full text-left text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                Workflow Automation<br />
-                That <span className="text-jorange">Drives</span> Results
+                Workflow Automation <br/> That <span className="text-jorange">Drives</span> Results
               </h1>
               <br />
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-           I help businesses automate repetitive tasks, freeing up time so they can focus on the bigger picture.
+            Helping your business automate repetitive tasks, freeing up time so you can focus on the bigger picture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Button
@@ -108,7 +107,7 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
 className="w-full h-screen bg-no-repeat bg-center"
 style={{
   backgroundImage: "url('/lovable-uploads/herodp.png')",
-  backgroundSize: "auto 60%", // Shrinks the SVG image to 65% of container height
+  backgroundSize: "auto 60%", // Shrinks the  image to 65% of container height
   backgroundPosition: "calc(50% + 20px) center", // Moves the image 20px to the right
 }}
 

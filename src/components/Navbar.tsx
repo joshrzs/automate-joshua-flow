@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import "../styles/glow.css";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -50,41 +48,8 @@ const Navbar = () => {
             </ul>
             <ThemeToggle />
           </div>
-
-          {/* Mobile Navigation Toggle */}
-          <div className="md:hidden flex items-center gap-4">
-            <ThemeToggle />
-            <button 
-              className="text-foreground"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
         </div>
       </div>
-
-      {/* Mobile Navigation Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-sm">
-          <div className="container mx-auto px-4 py-4">
-            <ul className="flex flex-col space-y-4 text-base">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href} 
-                    className="text-foreground hover:text-jorange block py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
     </nav>
   );
 };

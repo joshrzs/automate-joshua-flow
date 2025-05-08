@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Moon, Sun } from 'lucide-react';
-import { Switch } from '@/components/ui/switch';
+import React, { useState, useEffect } from 'react';
 
 const ThemeToggle = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -9,7 +7,8 @@ const ThemeToggle = () => {
     // Check if user has a theme preference stored
     const storedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
+    // Set initial theme from storage or system preference
     if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
       setDarkMode(true);
       document.documentElement.classList.add('dark');
@@ -19,31 +18,18 @@ const ThemeToggle = () => {
     }
   }, []);
 
-  const toggleTheme = () => {
+  useEffect(() => {
+    // This ensures that once the state is updated, the theme is applied
     if (darkMode) {
-      // Switch to light mode
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      setDarkMode(false);
-    } else {
-      // Switch to dark mode
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
-      setDarkMode(true);
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
-  };
+  }, [darkMode]); // Only runs when darkMode changes
 
-  return (
-    <div className="flex items-center gap-2">
-      <Sun size={18} className={`${darkMode ? 'text-muted-foreground' : 'text-jorange'}`} />
-      <Switch 
-        checked={darkMode} 
-        onCheckedChange={toggleTheme} 
-        className={`${darkMode ? 'bg-jgreen' : 'bg-jorange'} rounded-full`}  // Ensure the switch is rounded and green when dark mode is active
-      />
-      <Moon size={18} className={`${darkMode ? 'text-jgreen' : 'text-muted-foreground'}`} />
-    </div>
-  );
+  return null; // No UI to render
 };
 
 export default ThemeToggle;
