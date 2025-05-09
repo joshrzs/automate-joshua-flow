@@ -102,11 +102,12 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
           </div>
 
           <div
-            className="w-full max-w-md mx-auto aspect-[3/2] bg-no-repeat bg-center transform scale-170"  // Increased scale by 10%
+            className="w-full max-w-md mx-auto aspect-[3/2] bg-no-repeat bg-center "  
             style={{
               backgroundImage: "url('/lovable-uploads/herodp.png')",
               backgroundSize: "contain", // Makes the image fit within the container
               backgroundPosition: "center", // Keeps the image centered
+              transform: "scale(1.3)"
             }}
           >
             {/* Optional: Add content inside here */}

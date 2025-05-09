@@ -144,7 +144,7 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 </div>
 
                 <img
-                  src="/media/calendly.jpg"
+                  src="/media/calend.png"
                   alt="Calendar Preview"
                   className="rounded-xl border shadow w-full"
                 />
