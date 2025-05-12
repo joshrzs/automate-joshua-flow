@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 import { Zap, Database, FileSpreadsheet, Layers3Icon, MailCheck } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import LogoSliderCards from '@/components/ui/LogoSliderCards'; // Ensure the path is correct
 
 // Forward ref to ServicesSection component
 const ServicesSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
@@ -56,18 +55,13 @@ const ServicesSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
             </Card>
           ))}
         </div>
-
-        {/* Add Tools I Work With Section Below Services */}
-        <div className="mt-16">
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 flex items-center gap-2">
-            Tools I <span className="text-jorange">Work With</span>
-          </h3>
-          <LogoSliderCards /> {/* This will display your logos */}
-        </div>
       </div>
     </section>
   );
 });
+
+
+
 
 // Give the component a display name for debugging
 ServicesSection.displayName = 'ServicesSection';

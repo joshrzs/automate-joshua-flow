@@ -45,16 +45,16 @@ const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>((props,
       tools: ["Workflows", "Calendars", "Pipelines", "Email Builder"],
       category: "Workflow Automation",
       media: ["/media/BookingAutomation.mp4"],
-      thumbnail: "/media/DC.jpg", // Thumbnail added
+      thumbnail: "/media/DC.jpg", // Thumbnail addednpm run d
     },
     {
-      title: "High-Converting Funnel Design",
+      title: "Lead-Optimized Funnel for Life Coach",
       description:
-        "Designed a modern, conversion-focused funnel layout optimized for lead capture, clean UI, and seamless user experience - built with responsiveness and brand consistency in mind.",
+        "Crafted a conversion-focused funnel for a life coach, featuring a compelling free ebook opt-in as the lead magnet - built with responsiveness and brand consistency in mind.",
       tools: ["Figma", "GoHighLevel", "Canva"],
       category: "Funnel Design",
-      media: ["/media/WINP.png"],
-      thumbnail: "/media/WINP.png", // Thumbnail added
+      media: ["/media/LC.mp4",], 
+      thumbnail: "/media/FUNN.png", // Thumbnail added
     },
     {
       title: "Minimalist Website for Service-Based Business",
