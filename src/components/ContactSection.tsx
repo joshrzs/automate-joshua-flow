@@ -90,7 +90,7 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
               <Card>
                 <CardContent className="p-6 flex items-start gap-4">
                   <div className="bg-jgreen/10 p-3 rounded-full">
-                    <Mail className="text-jgreen w-6 h-6" />
+                    <Mail className="text-jorange w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="font-medium text-lg mb-1">Email Me</h3>
@@ -104,7 +104,7 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
               <Card>
                 <CardContent className="p-6 flex items-start gap-4">
                   <div className="bg-jgreen/10 p-3 rounded-full">
-                    <MapPin className="text-jgreen w-6 h-6" />
+                    <MapPin className="text-jorange w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="font-medium text-lg mb-1">Location</h3>
@@ -133,7 +133,7 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
               <CardContent className="p-6 flex flex-col gap-4 h-full">
                 <div className="flex items-center gap-3">
                   <div className="bg-jgreen/10 p-3 rounded-full">
-                    <Calendar className="text-jgreen w-6 h-6" />
+                    <Calendar className="text-jorange w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="font-medium text-lg mb-1">Book a Free Call</h3>
@@ -143,11 +143,32 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
                   </div>
                 </div>
 
-                <img
-                  src="/media/calend.png"
-                  alt="Calendar Preview"
-                  className="rounded-xl border shadow w-full"
-                />
+              <div className="rounded-xl border border-white/20 bg-white/10 backdrop-blur-md p-4 grid grid-cols-7 gap-2 text-white text-sm shadow-inner">
+  {/* Weekday headers */}
+  {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day, i) => (
+    <div key={i} className="text-center font-medium text-white/70">{day}</div>
+  ))}
+
+  {/* Placeholder to shift start to Tuesday */}
+  <div></div>
+  <div></div>
+
+  {/* Days 1–30 with Calendly link */}
+  {Array.from({ length: 30 }).map((_, i) => (
+    <a
+      key={i}
+      href={`https://calendly.com/joshbalando`} // Optionally append ?date=...
+      target="_blank"
+      rel="noopener noreferrer"
+      className="aspect-square flex items-center justify-center rounded-lg bg-white/10 hover:bg-jorange/80 hover:text-white transition"
+    >
+      {i + 1}
+    </a>
+  ))}
+</div>
+
+
+
 
                 <div className="mt-auto">
                   <Button asChild className="bg-jorange text-white hover:bg-jorange-dark">

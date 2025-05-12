@@ -1,28 +1,45 @@
 import React, { forwardRef } from 'react';
-import { Zap, Database, FileSpreadsheet, Layers3Icon, MailCheck } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Zap,
+  Database,
+  FileSpreadsheet,
+  Layers3Icon,
+  MailCheck,
+} from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import LogoSliderCards from './ui/LogoSliderCards';
 
 // Forward ref to ServicesSection component
 const ServicesSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
   const services = [
     {
       title: "Workflow Automation",
-      description: "Connect your tools and automate repetitive tasks with Zapier & Make to save time and reduce errors.",
+      description:
+        "Connect your tools and automate repetitive tasks with Zapier & Make to save time and reduce errors.",
       icon: <Zap className="text-jorange h-10 w-10" />,
     },
     {
       title: "CRM Integration & Setup",
-      description: "Streamline your customer management with GoHighLevel CRM setup, integration, and optimization.",
+      description:
+        "Streamline your customer management with GoHighLevel CRM setup, integration, and optimization.",
       icon: <Database className="text-jorange h-10 w-10" />,
     },
     {
       title: "Funnel Design & Website Creation",
-      description: "Design visually appealing and conversion-focused funnels and websites using GoHighLevel’s builder—complete with forms, calendars, and automation integrations.",
+      description:
+        "Design visually appealing and conversion-focused funnels and websites using GoHighLevel’s builder—complete with forms, calendars, and automation integrations.",
       icon: <Layers3Icon className="text-jorange h-10 w-10" />,
     },
     {
       title: "Email & SMS Campaign Setup",
-      description: "Create and schedule targeted email and SMS campaigns to engage leads, follow up with clients, and boost overall communication using GHL’s built-in tools.",
+      description:
+        "Create and schedule targeted email and SMS campaigns to engage leads, follow up with clients, and boost overall communication using GHL’s built-in tools.",
       icon: <MailCheck className="text-jorange h-10 w-10" />,
     },
   ];
@@ -30,6 +47,7 @@ const ServicesSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
   return (
     <section id="services" ref={ref} className="bg-muted/30 border-t border-border">
       <div className="container mx-auto px-4 md:px-8">
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4">
             My Services
@@ -42,6 +60,7 @@ const ServicesSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
           </p>
         </div>
 
+        {/* Service Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="hover-scale border-t-4 border-t-jgreen">
@@ -55,13 +74,18 @@ const ServicesSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
             </Card>
           ))}
         </div>
+
+        {/* Logo Slider */}
+        <div className="mt-20">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Tools I <span className="text-jorange">Work</span> With
+          </h2>
+          <LogoSliderCards />
+        </div>
       </div>
     </section>
   );
 });
-
-
-
 
 // Give the component a display name for debugging
 ServicesSection.displayName = 'ServicesSection';
