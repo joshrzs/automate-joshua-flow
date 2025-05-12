@@ -27,12 +27,12 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
           <div className="lg:w-2/3 space-y-6 text-left">
             <div className="space-y-2">
               <h1 className="w-full text-left text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                Workflow Automation <br /> That <span className="text-jorange">Drives</span> Results
+                AI-Powered Automation for  <span className="text-jorange">High-Converting</span> Funnels
               </h1>
               <br />
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              Helping your business automate repetitive tasks, freeing up time so you can focus on the bigger picture.
+              Helping your business automate repetitive tasks, freeing up time so you can focus on the bigger picture. <br /><br />Need full funnel setup with automation? Let’s talk.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Button
