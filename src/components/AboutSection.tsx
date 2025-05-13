@@ -93,7 +93,7 @@ const AboutSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 <CheckCircle className="text-jgreen mr-5 h-7 w-7 mt-1" />
                 <div>
                   <p className="font-bold">{item.degree}</p>
-                  <p className="text-sm text-muted-foreground font-normal">
+                  <p className="text-base text-muted-foreground font-normal">
                     {item.institution} | {item.period}
                   </p>
                 </div>

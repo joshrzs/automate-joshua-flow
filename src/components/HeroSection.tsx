@@ -101,7 +101,8 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
             </div>
           </div>
 
-        
+
+ 
         </div>
       </div>
     </section>
