@@ -24,7 +24,7 @@ const logos = [
 const LogoSliderCards = () => {
   return (
     <div className="relative overflow-hidden w-full py-8">
-      <div className="animate-slide flex w-max gap-0 logo-slider">
+      <div className="flex w-max gap-0 logo-slider">
         {[...logos, ...logos].map((logo, index) => (
           <div
             key={index}
@@ -57,7 +57,7 @@ const LogoSliderCards = () => {
             }
           }
 
-          .animate-slide {
+          .logo-slider {
             animation: slide 20s linear infinite;
           }
 

@@ -27,7 +27,7 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
           <div className="lg:w-2/3 space-y-6 text-left">
             <div className="space-y-2">
               <h1 className="w-full text-left text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                AI-Powered Automation for  <span className="text-jorange">High-Converting</span> Funnels
+                AI Powered Automation for <span className="text-jorange">High-Converting</span> Funnels
               </h1>
               <br />
             </div>
@@ -101,17 +101,7 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
             </div>
           </div>
 
-          <div
-            className="w-full max-w-md mx-auto aspect-[3/2] bg-no-repeat bg-center "  
-            style={{
-              backgroundImage: "url('/lovable-uploads/herodp.png')",
-              backgroundSize: "contain", // Makes the image fit within the container
-              backgroundPosition: "center", // Keeps the image centered
-              transform: "scale(1.3)"
-            }}
-          >
-            {/* Optional: Add content inside here */}
-          </div>
+        
         </div>
       </div>
     </section>
