@@ -2,7 +2,7 @@ import React, { useRef, forwardRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import '../styles/glow.css';  // Correct path
+import '../styles/glow\.css';  // Correct path
 import '../styles/globals.css';  // Correct path
 
 const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
@@ -101,8 +101,10 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
             </div>
           </div>
 
-
- 
+          {/* Image section */}
+          <div className="lg:w-1/3">
+            <img src="/media/fn.png" alt="Hero Image" className="w-full h-auto object-cover" />
+          </div>
         </div>
       </div>
     </section>
