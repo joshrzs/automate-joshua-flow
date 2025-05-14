@@ -22,6 +22,12 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
     }
   };
 
+  // Get current date details for calendar
+  const today = new Date();
+  const currentDay = today.getDate();
+  const currentMonth = today.toLocaleString("default", { month: "long" });
+  const currentYear = today.getFullYear();
+
   return (
     <section id="contact" ref={ref} className="border-t border-border">
       <div className="container mx-auto px-4 md:px-8">
@@ -127,6 +133,11 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
                   </div>
                 </div>
 
+                {/* Month and Year Display */}
+                <div className="text-white text-lg font-medium">
+                  {currentMonth} {currentYear}
+                </div>
+
                 <div className="rounded-xl border border-white/20 bg-white/10 backdrop-blur-md p-4 grid grid-cols-7 gap-2 text-white text-sm shadow-inner">
                   {/* Weekday headers */}
                   {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day, i) => (
@@ -134,21 +145,34 @@ const ContactSection = forwardRef<HTMLDivElement, {}>((props, ref) => {
                       {day}
                     </div>
                   ))}
+
                   {/* Placeholder to shift start to Tuesday */}
-                  <div></div>
-                  <div></div>
-                  {/* Days 1–30 with Calendly link */}
-                  {Array.from({ length: 30 }).map((_, i) => (
-                    <a
-                      key={i}
-                      href={`https://calendly.com/joshbalando`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="aspect-square flex items-center justify-center rounded-lg bg-white/10 hover:bg-jorange/80 hover:text-white transition"
-                    >
-                      {i + 1}
-                    </a>
-                  ))}
+                <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div>
+
+                  {/* Days 1–30 with highlight for today */}
+                  {Array.from({ length: 31 }).map((_, i) => {
+                    const day = i + 1;
+                    const isToday = day === currentDay;
+                    return (
+                      <a
+                        key={i}
+                        href="https://calendly.com/joshbalando"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`aspect-square flex items-center justify-center rounded-lg transition
+                          ${
+                            isToday
+                              ? "bg-jorange text-white font-bold"
+                              : "bg-white/10 hover:bg-jorange/80 hover:text-white"
+                          }`}
+                      >
+                        {day}
+                      </a>
+                    );
+                  })}
                 </div>
 
                 <div className="mt-auto">
