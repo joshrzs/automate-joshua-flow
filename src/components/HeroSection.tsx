@@ -85,25 +85,25 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
               <Tooltip>
                 <TooltipTrigger>
                   <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
-                    ChatGPT
+                    Systeme.io
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>AI-powered solutions</TooltipContent>
+                <TooltipContent>Funnel Builder</TooltipContent>
               </Tooltip>
               <Tooltip>
                 <TooltipTrigger>
                   <div className="bg-background/80 backdrop-blur-sm shadow-lg rounded-full px-4 py-2 text-sm font-medium hover:scale-105 transition-transform cursor-pointer border border-border/50">
-                    Figma
+                    ChatGPT
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>UI/UX Design Tool</TooltipContent>
+                <TooltipContent>AI Powered Solution</TooltipContent>
               </Tooltip>
             </div>
-          </div>
+          </div> 
 
           {/* Image section */}
-          <div className="lg:w-1/3">
-            <img src="/media/fn.png" alt="Hero Image" className="w-full h-auto object-cover" />
+          <div className="lg:w-2/3">
+            <img src="/media/hia.png" alt="Hero Image" className="w-full h-auto object-cover" />
           </div>
         </div>
       </div>
