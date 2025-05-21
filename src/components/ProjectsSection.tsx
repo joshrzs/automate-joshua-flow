@@ -26,7 +26,7 @@ const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>((props,
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [hoveredProjectIndex, setHoveredProjectIndex] = useState<number | null>(null); // New state for hover effect
 
-  const categories = ["All", "Workflow Automation", "Funnel Design", "Website Design"];
+  const categories = ["All", "Workflow Automation", "Funnel Design"];
 
   const projects: Project[] = [
     {
@@ -57,13 +57,13 @@ const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>((props,
       thumbnail: "/media/TNLC.jpg", // Thumbnail added
     },
     {
-      title: "Minimalist Website for Service-Based Business",
+      title: "Roofing Funnel for Local Service Business",
       description:
-        "Created a sleek, user-friendly website with a minimalist layout, clear messaging, and custom visuals. Prioritized mobile responsiveness and brand-focused design elements.",
-      tools: ["Figma", "GoHighLevel", "Canva"],
-      category: "Website Design",
-      media: ["/media/WINP.png"],
-      thumbnail: "/media/WINP.png", // Thumbnail added
+        "Built a roofing services funnel in GoHighLevel featuring a modern layout, client testimonials, and an easy booking system. Emphasized mobile-friendly design and clear calls-to-action to drive leads.",
+      tools: ["Funnel Builder", "GoHighLevel", "Canva"],
+      category: "Funnel Design",
+      media: ["/media/RS.mp4"],
+      thumbnail: "/media/RSTN.jpg", // Thumbnail added
     },
   ];
 
