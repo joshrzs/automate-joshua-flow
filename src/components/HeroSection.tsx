@@ -103,7 +103,7 @@ const HeroSection = forwardRef<HTMLElement, {}>((props, ref) => {
 
           {/* Image section */}
           <div className="lg:w-2/3">
-            <img src="/media/herodp.png" alt="Hero Image" className="w-full h-auto object-cover" />
+            <img src="/media/this.png" alt="Hero Image" className="w-full h-auto object-cover" />
           </div>
         </div>
       </div>

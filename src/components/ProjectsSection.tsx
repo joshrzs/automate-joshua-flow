@@ -65,6 +65,15 @@ const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>((props,
       media: ["/media/RS.mp4"],
       thumbnail: "/media/RSTN.jpg", // Thumbnail added
     },
+    {
+      title: "Client Booking → Task Tracking & Instant Team Notification Flow",
+      description:
+        "Built a complete automation using Make (Integromat) triggered by a Google Form response. Integrated Google Sheets, Notion, Slack, and Airtable to automatically track new leads, notify the team, and update the CRM. Focused on simplifying the onboarding flow and reducing manual tasks.",
+      tools: ["Make (Integromat)", "Google Sheets", "Notion", "Slack", "Airtable"],
+      category: "Workflow Automation",
+      media: ["/media/make.mp4"],
+      thumbnail: "/media/makes.jpg", // Thumbnail added
+    },
   ];
 
   const filteredProjects =
