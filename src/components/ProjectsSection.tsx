@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useState, useRef } from "react";
 import {
   Card,
   CardContent,
@@ -23,14 +23,14 @@ interface ProjectsSectionProps {}
 const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>(
   (props, ref) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedProject, setSelectedProject] = useState<Project | null>(
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [selectedCategory, setSelectedCategory] = useState<string>("All");
+    const [hoveredProjectIndex, setHoveredProjectIndex] = useState<number | null>(
       null
     );
-    const [selectedCategory, setSelectedCategory] = useState<string>("All");
-    const [hoveredProjectIndex, setHoveredProjectIndex] = useState<
-      number | null
-    >(null);
     const [page, setPage] = useState(0);
+
+    const containerRef = useRef<HTMLDivElement | null>(null);
 
     const categories = ["All", "Workflow Automation", "Funnel Design"];
     const projectsPerPage = 4;
@@ -105,13 +105,27 @@ const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>(
       setSelectedProject(null);
     };
 
+    const scrollToTop = () => {
+      if (!containerRef.current) return;
+      const containerTop =
+        containerRef.current.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: containerTop, behavior: "smooth" });
+    };
+
+    const handlePageChange = (newPage: number) => {
+      setPage(newPage);
+      setTimeout(() => {
+        scrollToTop();
+      }, 50);
+    };
+
     return (
       <section
         ref={ref}
         id="projects"
         className="bg-muted/30 border-t border-border py-16 relative"
       >
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-4 md:px-8" ref={containerRef}>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-block bg-jorange/10 text-jorange px-4 py-2 rounded-full text-sm font-medium mb-4">
               My Projects
@@ -135,7 +149,10 @@ const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>(
                   key={cat}
                   onClick={() => {
                     setSelectedCategory(cat);
-                    setPage(0); // Reset page when category changes
+                    setPage(0);
+                    setTimeout(() => {
+                      scrollToTop();
+                    }, 50);
                   }}
                   className={`px-5 py-2 text-sm font-medium transition-colors ${
                     selectedCategory === cat
@@ -214,12 +231,12 @@ const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>(
             ))}
           </div>
 
-          {/* Pagination Buttons at the Bottom */}
+          {/* Pagination Buttons */}
           {totalPages > 1 && (
             <div className="flex justify-center items-center gap-4">
               <button
                 disabled={page === 0}
-                onClick={() => setPage((prev) => Math.max(prev - 1, 0))}
+                onClick={() => handlePageChange(Math.max(page - 1, 0))}
                 className="bg-jorange text-white p-3 rounded-full shadow disabled:opacity-30"
               >
                 <ChevronLeft />
@@ -229,9 +246,7 @@ const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>(
               </span>
               <button
                 disabled={page >= totalPages - 1}
-                onClick={() =>
-                  setPage((prev) => Math.min(prev + 1, totalPages - 1))
-                }
+                onClick={() => handlePageChange(Math.min(page + 1, totalPages - 1))}
                 className="bg-jorange text-white p-3 rounded-full shadow disabled:opacity-30"
               >
                 <ChevronRight />
@@ -244,8 +259,8 @@ const ProjectsSection = forwardRef<HTMLDivElement, ProjectsSectionProps>(
         {selectedProject && (
           <ProjectModal
             open={isModalOpen}
-            onOpenChange={handleModalClose}
             project={selectedProject}
+            onOpenChange={setIsModalOpen}     
           />
         )}
       </section>
